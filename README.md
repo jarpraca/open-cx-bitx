@@ -1,6 +1,6 @@
-# openCX-*your module name* Development Report
+# openCX-*BitX* Development Report
 
-Welcome to the documentation pages of the *your (sub)product name* of **openCX**!
+Welcome to the documentation pages of the *BitX* of **openCX**!
 
 You can find here detailed information about the (sub)product, hereby mentioned as module, from a high-level vision to low-level implementation decisions, a kind of Software Development Report (see [template](https://github.com/softeng-feup/open-cx/blob/master/docs/templates/Development-Report.md)), organized by discipline (as of RUP): 
 
@@ -31,19 +31,13 @@ Please contact us!
 
 Thank you!
 
-*team members names*
+João Praça
+Leonor Sousa
+Lucas Ribeiro
+Sílvia Rocha
 
 ## Product Vision
-Start by defining a clear and concise vision for your module, to help members of the team, contributors, and users into focusing their often disparate views into a concise, visual, and short textual form. It provides a "high concept" of the product for marketers, developers, and managers.
-
-A product vision describes the essential of the product and sets the direction to where a product is headed, and what the product will deliver in the future.
-
-To learn more about how to write a good product vision, please see also:
-* [How To Create A Convincing Product Vision To Guide Your Team, by uxstudioteam.com](https://uxstudioteam.com/ux-blog/product-vision/)
-* [Product Management: Product Vision, by ProductPlan](https://www.productplan.com/glossary/product-vision/)
-* [Vision, by scrumbook.org](http://scrumbook.org/value-stream/vision.html)
-* [How to write a vision, by dummies.com](https://www.dummies.com/business/marketing/branding/how-to-write-vision-and-mission-statements-for-your-brand/)
-* [20 Inspiring Vision Statement Examples (2019 Updated), by lifehack.org](https://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
+Dispositivo Beacon colocado na entrada da FEUP que deteta quando o participante entra, através de uma app, e faz o check-in automático. Algumas pessoas serão sorteadas e serão recebidas por um robot que lhes entregará o saco de boas vindas.
 
 ## Elevator Pitch
 Draft a small text to help you quickly introduce and describe your product in a short time and a few words, a technique usually known as elevator pitch.
