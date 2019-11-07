@@ -31,21 +31,21 @@ Please contact us!
 
 Thank you!
 
-João Praça
-Leonor Sousa
-Lucas Ribeiro
-Sílvia Rocha
+João Praça<br />
+Leonor Sousa<br />
+Lucas Ribeiro<br />
+Sílvia Rocha<br />
 
 ## Product Vision
 Creating a product that improves the user experience in the check-in process.
 
 ## Elevator Pitch
-Tired of wainting in infinite queues just to make a simple check-in?
-Tired of having that check-in made by ordinary people?
-Here in Bitx, We have the perfect solution for you: BotX! All you have to do is have your bluetooth on and as soon as you reach the place of the event, the check-in will be made automatically for you. You will then receive a QR-code with wich you can collect your welcome kit. 
-But that isn't enough, is it? 
-Well, if you are one of the lucky ones, you will be rewarded with a special surprise: BotX, our genial robot will be the one delivering the welcome kit to you.
-Are you ready for the best check-in of your life?!
+Tired of wainting in infinite queues just to make a simple check-in?<br />
+Tired of having that check-in made by ordinary people?<br />
+Here in Bitx, We have the perfect solution for you: BotX! All you have to do is have your bluetooth on and as soon as you reach the place of the event, the check-in will be made automatically for you. You will then receive a QR-code with wich you can collect your welcome kit. <br />
+But that isn't enough, is it? <br />
+Well, if you are one of the lucky ones, you will be rewarded with a special surprise: BotX, our genial robot will be the one delivering the welcome kit to you.<br />
+Are you ready for the best check-in of your life?!<br />
 
 ## Requirements
 
