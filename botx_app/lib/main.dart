@@ -15,6 +15,860 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 
+class Login extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+  title: Row(
+        children: <Widget>[Text('<programming> 2020',
+      style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+          shadows: <Shadow>[
+            Shadow(
+                offset: Offset(1.0, 1.0),
+                blurRadius: 3.0,
+                color: const Color(0xff66abbe)
+            ),
+            Shadow(
+                offset: Offset(-1.0, -1.0),
+                blurRadius: 3.0,
+                color: const Color(0xff66abbe)
+            )])),
+          Image( image: AssetImage('assets/images/logo.png')
+  )])),
+  body: ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
+        Container(
+          height: 130,
+        ),
+
+        Container(
+          height: 80,
+          child:
+          const Center(
+              child: Text('Insert your code',
+                  style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                      shadows: <Shadow>[
+                        Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        ),
+                        Shadow(
+                            offset: Offset(-1.0, -1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        )]))),
+        ),
+
+        Container(
+            height: 80,
+            child: new TextField(
+                style: new TextStyle(color: const Color(0xaaffffff)),
+                decoration: InputDecoration(
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: const Color(0xff66abbe)),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: const Color(0xff66abbe)),
+                  ),
+                ),
+                )
+        ),
+        SizedBox(
+            width: 40.0,
+            height: 80.0,
+            child: MaterialButton(
+                child: Text('Submit', textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )])),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NotCheckedIn()),
+                  );
+                },
+                shape: RoundedRectangleBorder(side: BorderSide(
+                    color: const Color(0xff66abbe), width: 1.0,style: BorderStyle.solid ),  borderRadius: BorderRadius.circular(40))
+            )
+        ),
+
+        Container(
+          alignment: Alignment.center,
+          height:100.0,
+          child: new MaterialButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RecoverCode()),
+              );
+            },
+            child: Text("Forgot your password?", textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                    shadows: <Shadow>[
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      ),
+                      Shadow(
+                          offset: Offset(-1.0, -1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      )])),
+          ),
+        ),
+
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Column(
+              children: <Widget> [
+                Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                    shadows: <Shadow>[
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      ),
+                      Shadow(
+                          offset: Offset(-1.0, -1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      )])),
+                Image( image: AssetImage('assets/images/bitX.png'), height:50),
+              ]),
+        ),
+
+      ]
+  )
+  );
+}}
+
+class RecoverCode extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+            title: Row(
+                children: <Widget>[Text('<programming> 2020',
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )])),
+                  Image( image: AssetImage('assets/images/logo.png')
+                  )])),
+        body: ListView(
+            padding: const EdgeInsets.all(8),
+            children: <Widget>[
+              Container(
+                height: 130,
+              ),
+
+              Container(
+                height: 80,
+                child:
+                const Center(
+                    child: Text('Insert your email',
+                        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                            shadows: <Shadow>[
+                              Shadow(
+                                  offset: Offset(1.0, 1.0),
+                                  blurRadius: 3.0,
+                                  color: const Color(0xff66abbe)
+                              ),
+                              Shadow(
+                                  offset: Offset(-1.0, -1.0),
+                                  blurRadius: 3.0,
+                                  color: const Color(0xff66abbe)
+                              )]))),
+              ),
+
+              Container(
+                  height: 80,
+                  child: new TextField(
+                    style: new TextStyle(color: const Color(0xaaffffff)),
+                    decoration: InputDecoration(
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: const Color(0xff66abbe)),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: const Color(0xff66abbe)),
+                      ),
+                    ),
+                  )
+              ),
+              SizedBox(
+                  width: 40.0,
+                  height: 80.0,
+                  child: MaterialButton(
+                      child: Text('Submit', textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                              shadows: <Shadow>[
+                                Shadow(
+                                    offset: Offset(1.0, 1.0),
+                                    blurRadius: 3.0,
+                                    color: const Color(0xff66abbe)
+                                ),
+                                Shadow(
+                                    offset: Offset(-1.0, -1.0),
+                                    blurRadius: 3.0,
+                                    color: const Color(0xff66abbe)
+                                )])),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SelectedUser()),
+                        );
+                      },
+                      shape: RoundedRectangleBorder(side: BorderSide(
+                          color: const Color(0xff66abbe), width: 1.0,style: BorderStyle.solid ),  borderRadius: BorderRadius.circular(40))
+                  )
+              ),
+
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Column(
+                    children: <Widget> [
+                      Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                          shadows: <Shadow>[
+                            Shadow(
+                                offset: Offset(1.0, 1.0),
+                                blurRadius: 3.0,
+                                color: const Color(0xff66abbe)
+                            ),
+                            Shadow(
+                                offset: Offset(-1.0, -1.0),
+                                blurRadius: 3.0,
+                                color: const Color(0xff66abbe)
+                            )])),
+                      Image( image: AssetImage('assets/images/bitX.png'), height:50),
+                    ]),
+              ),
+
+            ]
+        )
+    );
+  }}
+
+class Help extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+            title: Row(
+                children: <Widget>[Text('<programming> 2020',
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )])),
+                  Image( image: AssetImage('assets/images/logo.png')
+                  )])),
+        body: ListView(
+            padding: const EdgeInsets.all(8),
+            children: <Widget>[
+              Container(
+                height: 40,
+              ),
+              Image( image: AssetImage('assets/images/help_button.png'), height:100),
+
+        Row(
+          children: <Widget>[
+          Expanded(
+          flex: 10,
+          child: Divider(color: const Color(0xff66abbe), height:20.0, thickness:2.0))]),
+        Container(
+          padding: const EdgeInsets.all(20),
+          height: 300,
+          child:
+          const Center(
+            child: Text('Your check-in is done automatically as soon as we detect that you have entered the premisses, for that to work we need you to turn on your Bluetooth. If you are one of the lucky selected, our robot, BotX, will deliver your welcome package to you itself ',
+                textAlign: TextAlign.center, style: TextStyle(fontSize: 24, color: const Color(0xaaffffff),
+                shadows: <Shadow>[
+                  Shadow(
+                      offset: Offset(1.0, 1.0),
+                      blurRadius: 7.0,
+                      color: const Color(0xff66abbe)
+                  ),
+                  Shadow(
+                      offset: Offset(-1.0, -1.0),
+                      blurRadius: 7.0,
+                      color: const Color(0xff66abbe)
+                  )]))),
+        ),
+        Row(
+            children: <Widget>[
+              Expanded(
+                  flex: 10,
+                  child: Divider(color: const Color(0xff66abbe), height:20.0, thickness:2.0))]),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Column(
+              children: <Widget> [
+                Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                    shadows: <Shadow>[
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      ),
+                      Shadow(
+                          offset: Offset(-1.0, -1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      )])),
+                Image( image: AssetImage('assets/images/bitX.png'), height:50),
+              ]),
+        ),
+
+      ]
+  )
+    );
+  }}
+
+class NotCheckedIn extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+        title: Row(
+        children: <Widget>[Text('<programming> 2020',
+        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+          shadows: <Shadow>[
+          Shadow(
+          offset: Offset(1.0, 1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)
+          ),
+          Shadow(
+          offset: Offset(-1.0, -1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)
+          )])),
+    Image( image: AssetImage('assets/images/logo.png')
+    )])),
+    body: ListView(
+    padding: const EdgeInsets.all(8),
+    children: <Widget>[
+      Container(
+        height: 40),
+      Container(
+        height: 150,
+        child: const Center(child: Image( image: AssetImage('assets/images/logo.png'))),
+      ),
+      Container(
+      height: 120,
+      child:
+      const Center(
+      child: Text('QR Code Not Available Yet',
+      style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+      shadows: <Shadow>[
+      Shadow(
+      offset: Offset(1.0, 1.0),
+      blurRadius: 3.0,
+      color: const Color(0xff66abbe)
+      ),
+      Shadow(
+      offset: Offset(-1.0, -1.0),
+      blurRadius: 3.0,
+      color: const Color(0xff66abbe)
+      )]))),
+      ),
+      SizedBox(
+          width: 40.0,
+          height: 80.0,
+          child: MaterialButton(
+              child: Text('Check-In: Not Completed', textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                      shadows: <Shadow>[
+                        Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        ),
+                        Shadow(
+                            offset: Offset(-1.0, -1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        )])),
+              onPressed:null,
+              shape: RoundedRectangleBorder(side: BorderSide(
+                  color: const Color(0xff66abbe), width: 1.0,style: BorderStyle.solid ),  borderRadius: BorderRadius.circular(40))
+          )
+      ),
+      Container(
+        height: 150,
+          alignment: Alignment.center,
+          child: FlatButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Help()),
+                );},
+              padding: EdgeInsets.all(0.0),
+              child: Image.asset('assets/images/help_button.png'))),
+      Align(
+        alignment: Alignment.bottomRight,
+        child: Column(
+            children: <Widget> [
+              Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                  shadows: <Shadow>[
+                    Shadow(
+                        offset: Offset(1.0, 1.0),
+                        blurRadius: 3.0,
+                        color: const Color(0xff66abbe)
+                    ),
+                    Shadow(
+                        offset: Offset(-1.0, -1.0),
+                        blurRadius: 3.0,
+                        color: const Color(0xff66abbe)
+                    )])),
+              Image( image: AssetImage('assets/images/bitX.png'), height:50),
+            ]),
+      ),
+
+
+    ]));
+  }
+}
+
+class Homepage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+   return ListView(
+      padding: const EdgeInsets.all(8),
+      children: <Widget>[
+        Container(
+          height: 40,
+        ),
+        Container(
+          height: 150,
+          child: const Center(child: Image( image: AssetImage('assets/images/logo.png'))),
+        ),
+        Container(
+          height: 80,
+          child:
+          const Center(
+              child: Text('<programming> 2020',
+                  style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                      shadows: <Shadow>[
+                        Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        ),
+                        Shadow(
+                            offset: Offset(-1.0, -1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        )]))),
+        ),
+        SizedBox(
+            width: 40.0,
+            height: 80.0,
+            child: MaterialButton(
+                child: Text('Sign In', textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )])),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+                },
+                shape: RoundedRectangleBorder(side: BorderSide(
+                    color: const Color(0xff66abbe), width: 1.0,style: BorderStyle.solid ),  borderRadius: BorderRadius.circular(40))
+            )
+        ),
+
+        Container(
+          alignment: Alignment.center,
+          height:100.0,
+          child: new RaisedButton(
+            onPressed: null,
+            child: Text("Don't own a ticket?\nBuy one now", textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                    shadows: <Shadow>[
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      ),
+                      Shadow(
+                          offset: Offset(-1.0, -1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      )])),
+          ),
+        ),
+
+        Container(
+            alignment: Alignment.center,
+            child: FlatButton(
+                onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Help()),
+                    );},
+                padding: EdgeInsets.all(0.0),
+                child: Image.asset('assets/images/help_button.png'))),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Column(
+              children: <Widget> [
+                Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                    shadows: <Shadow>[
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      ),
+                      Shadow(
+                          offset: Offset(-1.0, -1.0),
+                          blurRadius: 3.0,
+                          color: const Color(0xff66abbe)
+                      )])),
+                Image( image: AssetImage('assets/images/bitX.png'), height:50),
+              ]),
+        ),
+
+      ]
+    );
+}}
+
+class SelectedUser extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+        title: Row(
+        children: <Widget>[Text('<programming> 2020',
+        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+          shadows: <Shadow>[
+          Shadow(
+          offset: Offset(1.0, 1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)
+          ),
+          Shadow(
+          offset: Offset(-1.0, -1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)
+          )])),
+          Image( image: AssetImage('assets/images/logo.png')
+          )])),
+          body: ListView(
+          padding: const EdgeInsets.all(8),
+          children: <Widget>[
+              Container(
+              height:40),
+            Container(
+              height:50,
+              child:
+              const Center(
+                  child: Text('You have been selected!',
+                      style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                          shadows: <Shadow>[
+                            Shadow(
+                                offset: Offset(1.0, 1.0),
+                                blurRadius: 3.0,
+                                color: const Color(0xff66abbe)
+                            ),
+                            Shadow(
+                                offset: Offset(-1.0, -1.0),
+                                blurRadius: 3.0,
+                                color: const Color(0xff66abbe)
+                            )]))),
+            ),
+            Container(
+              height: 100,
+              child: const Center(child: Image( image: AssetImage('assets/images/botX.png'))),
+            ),
+            Container(
+              height: 50,
+              child:
+              const Center(
+                  child: Text('is on the way!',
+                      style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                        Shadow(
+                        offset: Offset(1.0, 1.0),
+                        blurRadius: 3.0,
+                        color: const Color(0xff66abbe)
+                        ),
+                        Shadow(
+                        offset: Offset(-1.0, -1.0),
+                        blurRadius: 3.0,
+                        color: const Color(0xff66abbe)
+                        )]),
+            ))),
+            Row(
+                children: <Widget>[
+                  Expanded(
+                      flex: 10,
+                      child: Divider(color: const Color(0xff66abbe), height:40.0, thickness:2.0))]),
+            Container(
+              height: 230,
+              child: const Center(child: Image( image: AssetImage('assets/images/qrcode.png'))),
+            ),
+            Row(
+                children: <Widget>[
+                  Expanded(
+                      flex: 10,
+                      child: Divider(color: const Color(0xff66abbe), height:40.0, thickness:2.0))]),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Column(
+                  children: <Widget> [
+                    Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )])),
+                    Image( image: AssetImage('assets/images/bitX.png'), height:50),
+                  ]),
+            ),
+
+          ]
+        ));
+  }}
+
+class NotSelectedUser extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+        title: Row(
+        children: <Widget>[Text('<programming> 2020',
+        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+          shadows: <Shadow>[
+          Shadow(
+          offset: Offset(1.0, 1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)
+          ),
+          Shadow(
+          offset: Offset(-1.0, -1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)
+          )])),
+        Image( image: AssetImage('assets/images/logo.png')
+        )])),
+        body: ListView(
+        padding: const EdgeInsets.all(8),
+        children: <Widget>[
+            Container(
+            height: 40),
+          Container(
+            height: 100,
+            child:
+            const Center(
+                child: Text("Sorry!\nYou haven't been selected!", textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )]))),
+          ),
+          Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 10,
+                    child: Divider(color: const Color(0xff66abbe), height:40.0, thickness:2.0))]),
+          Container(
+            height: 200,
+            child: const Center(child: Image( image: AssetImage('assets/images/qrcode.png'))),
+          ),
+          Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 10,
+                    child: Divider(color: const Color(0xff66abbe), height:40.0, thickness:2.0))]),
+          Container(
+              alignment: Alignment.center,
+              child: FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Help()),
+                    );},
+                  padding: EdgeInsets.all(0.0),
+                  child: Image.asset('assets/images/help_button.png'))),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Column(
+                children: <Widget> [
+                  Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                      shadows: <Shadow>[
+                        Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        ),
+                        Shadow(
+                            offset: Offset(-1.0, -1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        )])),
+                  Image( image: AssetImage('assets/images/bitX.png'), height:50),
+                ]),
+          ),
+        ]
+    ));
+  }}
+
+class TurnOnBluetooth extends StatelessWidget{
+  final StreamController<BluetoothState> streamController = StreamController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+        title: Row(
+        children: <Widget>[Text('<programming> 2020',
+        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+    shadows: <Shadow>[
+    Shadow(
+    offset: Offset(1.0, 1.0),
+    blurRadius: 3.0,
+    color: const Color(0xff66abbe)
+    ),
+    Shadow(
+    offset: Offset(-1.0, -1.0),
+    blurRadius: 3.0,
+    color: const Color(0xff66abbe)
+    )])),
+    Image( image: AssetImage('assets/images/logo.png')
+    )])),
+    body:ListView(
+        padding: const EdgeInsets.all(8),
+        children: <Widget>[
+          Container(
+              height: 100),
+          Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 10,
+                    child: Divider(color: const Color(0xff66abbe), height:40.0, thickness:2.0))]),
+          Container(
+            height: 100,
+            child:
+            const Center(
+                child: Text("Please turn on your bluetooth", textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )]))),
+          ),
+
+         IconButton(
+             icon: Icon(Icons.bluetooth, size: 100),
+             onPressed: () {},
+             color: const Color(0xff66abbe),
+           ),
+          Row(
+              children: <Widget>[
+                Expanded(
+                    flex: 10,
+                    child: Divider(color: const Color(0xff66abbe), height:200.0, thickness:2.0))]),
+          Container(
+              alignment: Alignment.center,
+              child: FlatButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Help()),
+                    );},
+                  padding: EdgeInsets.all(0.0),
+                  child: Image.asset('assets/images/help_button.png'))),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Column(
+                children: <Widget> [
+                  Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
+                      shadows: <Shadow>[
+                        Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        ),
+                        Shadow(
+                            offset: Offset(-1.0, -1.0),
+                            blurRadius: 3.0,
+                            color: const Color(0xff66abbe)
+                        )])),
+                  Image( image: AssetImage('assets/images/bitX.png'), height:50),
+                ]),
+          ),
+        ]
+    ));
+  }}
+
 class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   final StreamController<BluetoothState> streamController = StreamController();
   StreamSubscription<BluetoothState> _streamBluetooth;
@@ -25,7 +879,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   bool locationServiceEnabled = false;
   bool bluetoothEnabled = false;
 
-  @override
+    @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
 
@@ -178,7 +1032,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       home: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text('Flutter Beacon'),
+          title: Text(""),
           centerTitle: false,
           actions: <Widget>[
             if (!authorizationStatusOk)
@@ -245,138 +1099,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           ],
         ),
         body: _beacons == null || _beacons.isEmpty
-            ? ListView(
-          padding: const EdgeInsets.all(8),
-          children: <Widget>[
-            Container(
-              height: 130,
-            ),
-            Container(
-              height: 150,
-              child: const Center(child: Image( image: AssetImage('assets/images/logo.png'))),
-            ),
-            Container(
-              height: 50,
-              child:
-              const Center(
-                  child: Text('<programming> 2020',
-                      style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
-                          shadows: <Shadow>[
-                            Shadow(
-                                offset: Offset(1.0, 1.0),
-                                blurRadius: 3.0,
-                                color: const Color(0xff66abbe)
-                            ),
-                            Shadow(
-                                offset: Offset(-1.0, -1.0),
-                                blurRadius: 3.0,
-                                color: const Color(0xff66abbe)
-                            )]))),
-            ),
-            new ButtonBar(
-              mainAxisSize: MainAxisSize.max, // this will take space as minimum as posible(to center)
-              children: <Widget>[
-                new RaisedButton(
-                  child: Text('Sign In', textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
-                    shadows: <Shadow>[
-                      Shadow(
-                          offset: Offset(1.0, 1.0),
-                          blurRadius: 3.0,
-                          color: const Color(0xff66abbe)
-                      ),
-                      Shadow(
-                          offset: Offset(-1.0, -1.0),
-                          blurRadius: 3.0,
-                          color: const Color(0xff66abbe)
-                      )])),
-                  onPressed: null,
-                    shape: RoundedRectangleBorder( borderRadius: BorderRadius.horizontal( left: Radius.circular(30.0), right: Radius.circular(30.0)))
-                )
-              ],
-            ),
-          new RaisedButton(
-            onPressed: null,
-            child: Text("Don't own a ticket?\nBuy one now", textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
-                        shadows: <Shadow>[
-                          Shadow(
-                              offset: Offset(1.0, 1.0),
-                              blurRadius: 3.0,
-                              color: const Color(0xff66abbe)
-                          ),
-                          Shadow(
-                              offset: Offset(-1.0, -1.0),
-                              blurRadius: 3.0,
-                              color: const Color(0xff66abbe)
-                          )])),
-            ),
-            Container(
-                alignment: Alignment.center,
-                child: FlatButton(
-                    onPressed: null,
-                    padding: EdgeInsets.all(0.0),
-                    child: Image.asset('assets/images/help_button.png'))),
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Column(
-                children: <Widget> [
-                  Text("Powered by", style: TextStyle(fontSize: 16, color: const Color(0xaaffffff),
-                      shadows: <Shadow>[
-                        Shadow(
-                            offset: Offset(1.0, 1.0),
-                            blurRadius: 3.0,
-                            color: const Color(0xff66abbe)
-                        ),
-                        Shadow(
-                            offset: Offset(-1.0, -1.0),
-                            blurRadius: 3.0,
-                            color: const Color(0xff66abbe)
-                        )])),
-                  Image( image: AssetImage('assets/images/bitX.png'), height:50),
-                ]),
-            ),
-
-          ],
-        )
-            : ListView(
-          padding: const EdgeInsets.all(8),
-          children: <Widget>[
-            Container(
-              height: 50,
-              child:
-                const Center(
-                    child: Text('You have been selected!',
-                      style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
-                          shadows: <Shadow>[
-                      Shadow(
-                      offset: Offset(1.0, 1.0),
-                      blurRadius: 3.0,
-                      color: const Color(0xff66abbe)
-                    ),
-                      Shadow(
-                          offset: Offset(-1.0, -1.0),
-                          blurRadius: 3.0,
-                          color: const Color(0xff66abbe)
-                      )]))),
-            ),
-            Container(
-              height: 150,
-              child: const Center(child: Image( image: AssetImage('assets/images/botX.png'))),
-            ),
-            Container(
-              height: 50,
-              child:
-                const Center(
-                    child: Text('is on the way!',
-                          style: TextStyle(fontSize: 22, color: const Color(0xff66abbe)))),
-            ),
-            Container(
-              height: 150,
-              child: const Center(child: Image( image: AssetImage('assets/images/qrcode.png'))),
-            ),
-          ],
-        )
+            ? Homepage()
+            : SelectedUser()
       ),
     );
   }

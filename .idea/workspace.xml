@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="828866ae-f4a9-4a43-b30d-31776d89c97e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/botx_app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botx_app/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botx_app/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/botx_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botx_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botx_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,10 +24,48 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/botx_app/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="276" column="44" selection-start-line="276" selection-start-column="44" selection-end-line="276" selection-end-column="44" />
+            <state relative-caret-position="17">
+              <caret line="473" column="18" lean-forward="true" selection-start-line="473" selection-start-column="18" selection-end-line="473" selection-end-column="18" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
+                <element signature="e#345#508#0" />
+                <element signature="e#1133#1167#0" />
+                <element signature="e#1330#2014#0" />
+                <element signature="e#1889#2337#0" />
+                <element signature="e#4252#5021#0" />
+                <element signature="e#4449#8515#0" />
+                <element signature="e#4500#8514#0" />
+                <element signature="e#5237#5271#0" />
+                <element signature="e#5354#5962#0" />
+                <element signature="e#5993#6518#0" />
+                <element signature="e#6536#7708#0" />
+                <element signature="e#7724#8493#0" />
+                <element signature="e#4449#8515#0" />
+                <element signature="e#4583#5347#0" />
+                <element signature="e#7724#8493#0" />
+                <element signature="e#7769#9406#0" />
+                <element signature="e#7904#8352#0" />
+                <element signature="e#7957#8287#0" />
+                <element signature="e#8449#8884#0" />
+                <element signature="e#14915#16081#0" />
+                <element signature="e#15306#16075#0" />
+                <element signature="e#902#1586#0" />
+                <element signature="e#3788#4557#0" />
+                <element signature="e#23069#23455#0" />
+                <element signature="e#24294#25099#0" />
+                <element signature="e#22922#24448#0" />
+                <element signature="e#23905#24451#0" />
+                <element signature="e#25493#26262#0" />
+                <element signature="e#29416#30221#0" />
+                <element signature="e#688#787#0" />
+                <element signature="e#1333#1994#0" />
+                <element signature="e#2015#3173#0" />
+                <element signature="e#2197#2399#0" />
+                <element signature="e#2588#2689#0" />
+                <element signature="e#3195#3328#0" />
+                <element signature="e#3375#3613#0" />
+                <element signature="e#3686#4228#0" />
+                <element signature="e#4259#4454#0" />
               </folding>
             </state>
           </provider>
@@ -102,12 +136,32 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>default</find>
       <find>display1</find>
       <find>rangingresult</find>
       <find>scaffold</find>
+      <find>create</find>
+      <find>context</find>
+      <find>image</find>
+      <find>border</find>
+      <find>homepa</find>
+      <find>onPre</find>
+      <find>align</find>
+      <find>onpr</find>
+      <find>textA</find>
+      <find>divider</find>
+      <find>streamController</find>
+      <find>selected</find>
+      <find>homepage</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,6 +175,7 @@
         <option value="$PROJECT_DIR$/botx_app/android/gradle.properties" />
         <option value="$PROJECT_DIR$/botx_app/android/local.properties" />
         <option value="$PROJECT_DIR$/botx_app/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/botx_app/lib/login.dart" />
         <option value="$PROJECT_DIR$/botx_app/lib/main.dart" />
       </list>
     </option>
@@ -234,7 +289,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.3" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -242,7 +297,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32577905" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49925372" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49925372" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32822084" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3286119" />
@@ -258,20 +313,20 @@
     </layout>
     <layout-to-restore>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.3335821" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.3" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32668713" />
-      <window_info anchor="bottom" id="Run" order="1" visible="true" weight="0.35582823" />
+      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32577905" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49925372" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32822084" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Flutter Performance" order="6" sideWeight="0.50074625" side_tool="true" weight="0.35582823" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -341,12 +396,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/login.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/flutter/bin/cache/pkg/sky_engine/lib/ui/geometry.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="119" column="51" selection-start-line="119" selection-start-column="51" selection-end-line="119" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="276" column="44" selection-start-line="276" selection-start-column="44" selection-end-line="276" selection-end-column="44" />
+        <state relative-caret-position="17">
+          <caret line="473" column="18" lean-forward="true" selection-start-line="473" selection-start-column="18" selection-end-line="473" selection-end-column="18" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
+            <element signature="e#345#508#0" />
+            <element signature="e#1133#1167#0" />
+            <element signature="e#1330#2014#0" />
+            <element signature="e#1889#2337#0" />
+            <element signature="e#4252#5021#0" />
+            <element signature="e#4449#8515#0" />
+            <element signature="e#4500#8514#0" />
+            <element signature="e#5237#5271#0" />
+            <element signature="e#5354#5962#0" />
+            <element signature="e#5993#6518#0" />
+            <element signature="e#6536#7708#0" />
+            <element signature="e#7724#8493#0" />
+            <element signature="e#4449#8515#0" />
+            <element signature="e#4583#5347#0" />
+            <element signature="e#7724#8493#0" />
+            <element signature="e#7769#9406#0" />
+            <element signature="e#7904#8352#0" />
+            <element signature="e#7957#8287#0" />
+            <element signature="e#8449#8884#0" />
+            <element signature="e#14915#16081#0" />
+            <element signature="e#15306#16075#0" />
+            <element signature="e#902#1586#0" />
+            <element signature="e#3788#4557#0" />
+            <element signature="e#23069#23455#0" />
+            <element signature="e#24294#25099#0" />
+            <element signature="e#22922#24448#0" />
+            <element signature="e#23905#24451#0" />
+            <element signature="e#25493#26262#0" />
+            <element signature="e#29416#30221#0" />
+            <element signature="e#688#787#0" />
+            <element signature="e#1333#1994#0" />
+            <element signature="e#2015#3173#0" />
+            <element signature="e#2197#2399#0" />
+            <element signature="e#2588#2689#0" />
+            <element signature="e#3195#3328#0" />
+            <element signature="e#3375#3613#0" />
+            <element signature="e#3686#4228#0" />
+            <element signature="e#4259#4454#0" />
           </folding>
         </state>
       </provider>
