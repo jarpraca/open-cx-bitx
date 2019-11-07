@@ -41,6 +41,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_beacon:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: e41f9007efb9338d57a4ae9b0bb7bf417f735f21
+      url: "https://github.com/alann-maulana/flutter_beacon"
+    source: git
+    version: "0.2.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
