@@ -97,7 +97,7 @@ class Login extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => NotCheckedIn()),
+                    MaterialPageRoute(builder: (context) => BluetoothInteraction()),
                   );
                 },
                 shape: RoundedRectangleBorder(side: BorderSide(
@@ -358,26 +358,7 @@ class Help extends StatelessWidget {
 class NotCheckedIn extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-        title: Row(
-        children: <Widget>[Text('<programming> 2020',
-        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
-          shadows: <Shadow>[
-          Shadow(
-          offset: Offset(1.0, 1.0),
-          blurRadius: 3.0,
-          color: const Color(0xff66abbe)
-          ),
-          Shadow(
-          offset: Offset(-1.0, -1.0),
-          blurRadius: 3.0,
-          color: const Color(0xff66abbe)
-          )])),
-    Image( image: AssetImage('assets/images/logo.png')
-    )])),
-    body: ListView(
+    return ListView(
     padding: const EdgeInsets.all(8),
     children: <Widget>[
       Container(
@@ -458,7 +439,7 @@ class NotCheckedIn extends StatelessWidget{
       ),
 
 
-    ]));
+    ]);
   }
 }
 
@@ -579,26 +560,7 @@ class Homepage extends StatelessWidget {
 class SelectedUser extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-        title: Row(
-        children: <Widget>[Text('<programming> 2020',
-        style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
-          shadows: <Shadow>[
-          Shadow(
-          offset: Offset(1.0, 1.0),
-          blurRadius: 3.0,
-          color: const Color(0xff66abbe)
-          ),
-          Shadow(
-          offset: Offset(-1.0, -1.0),
-          blurRadius: 3.0,
-          color: const Color(0xff66abbe)
-          )])),
-          Image( image: AssetImage('assets/images/logo.png')
-          )])),
-          body: ListView(
+    return ListView(
           padding: const EdgeInsets.all(8),
           children: <Widget>[
               Container(
@@ -678,7 +640,7 @@ class SelectedUser extends StatelessWidget{
             ),
 
           ]
-        ));
+        );
   }}
 
 class NotSelectedUser extends StatelessWidget{
@@ -826,11 +788,17 @@ class TurnOnBluetooth extends StatelessWidget{
                           )]))),
           ),
 
-         IconButton(
-             icon: Icon(Icons.bluetooth, size: 100),
-             onPressed: () {},
-             color: const Color(0xff66abbe),
-           ),
+        IconButton(
+        icon: Icon(Icons.bluetooth, size: 100),
+            onPressed: () async {
+            if (Platform.isAndroid) {
+            try {
+            await flutterBeacon.openBluetoothSettings;
+            } on PlatformException catch (e) {
+            print(e);
+            }}},
+          color: const Color(0xff66abbe),
+        ),
           Row(
               children: <Widget>[
                 Expanded(
@@ -873,13 +841,220 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   final StreamController<BluetoothState> streamController = StreamController();
   StreamSubscription<BluetoothState> _streamBluetooth;
   StreamSubscription<RangingResult> _streamRanging;
+  bool authorizationStatusOk = false;
+  bool locationServiceEnabled = false;
+  bool bluetoothEnabled = false;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+
+    super.initState();
+
+    listeningState();
+  }
+
+  listeningState() async {
+    print('Listening to bluetooth state');
+    _streamBluetooth = flutterBeacon
+        .bluetoothStateChanged()
+        .listen((BluetoothState state) async {
+      print('BluetoothState = $state');
+      streamController.add(state);
+    });
+  }
+
+  checkAllRequirements() async {
+    final bluetoothState = await flutterBeacon.bluetoothState;
+    final bluetoothEnabled = bluetoothState == BluetoothState.stateOn;
+    final authorizationStatus = await flutterBeacon.authorizationStatus;
+    final authorizationStatusOk =
+        authorizationStatus == AuthorizationStatus.allowed ||
+            authorizationStatus == AuthorizationStatus.always;
+    final locationServiceEnabled =
+    await flutterBeacon.checkLocationServicesIfEnabled;
+
+    setState(() {
+      this.authorizationStatusOk = authorizationStatusOk;
+      this.locationServiceEnabled = locationServiceEnabled;
+      this.bluetoothEnabled = bluetoothEnabled;
+    });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    print('AppLifecycleState = $state');
+    if (state == AppLifecycleState.resumed) {
+      if (_streamBluetooth != null && _streamBluetooth.isPaused) {
+        _streamBluetooth.resume();
+      }
+      await checkAllRequirements();
+    } else if (state == AppLifecycleState.paused) {
+      _streamBluetooth?.pause();
+    }
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    streamController?.close();
+    _streamRanging?.cancel();
+    _streamBluetooth?.cancel();
+    flutterBeacon.close;
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.black,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: Text(""),
+          centerTitle: false,
+        ),
+        body: Homepage(),
+      ),
+    );
+  }
+}
+
+class BluetoothInteraction extends StatefulWidget with WidgetsBindingObserver{
+  @override
+  BluetoothInteractionState createState() => BluetoothInteractionState();
+}
+
+class BluetoothInteractionState extends State<BluetoothInteraction> with WidgetsBindingObserver {
+  final StreamController<BluetoothState> streamController = StreamController();
+  StreamSubscription<BluetoothState> _streamBluetooth;
+  StreamSubscription<RangingResult> _streamRanging;
+  bool authorizationStatusOk = false;
+  bool locationServiceEnabled = false;
+  bool bluetoothEnabled = false;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addObserver(this);
+
+    super.initState();
+
+    listeningState();
+  }
+
+  listeningState() async {
+    print('Listening to bluetooth state');
+    _streamBluetooth = flutterBeacon
+        .bluetoothStateChanged()
+        .listen((BluetoothState state) async {
+      print('BluetoothState = $state');
+      streamController.add(state);
+    });
+  }
+
+  checkAllRequirements() async {
+    final bluetoothState = await flutterBeacon.bluetoothState;
+    final bluetoothEnabled = bluetoothState == BluetoothState.stateOn;
+    final authorizationStatus = await flutterBeacon.authorizationStatus;
+    final authorizationStatusOk =
+        authorizationStatus == AuthorizationStatus.allowed ||
+            authorizationStatus == AuthorizationStatus.always;
+    final locationServiceEnabled =
+    await flutterBeacon.checkLocationServicesIfEnabled;
+
+    setState(() {
+      this.authorizationStatusOk = authorizationStatusOk;
+      this.locationServiceEnabled = locationServiceEnabled;
+      this.bluetoothEnabled = bluetoothEnabled;
+    });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    print('AppLifecycleState = $state');
+    if (state == AppLifecycleState.resumed) {
+      if (_streamBluetooth != null && _streamBluetooth.isPaused) {
+        _streamBluetooth.resume();
+      }
+      await checkAllRequirements();
+    } else if (state == AppLifecycleState.paused) {
+      _streamBluetooth?.pause();
+    }
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    streamController?.close();
+    _streamRanging?.cancel();
+    _streamBluetooth?.cancel();
+    flutterBeacon.close;
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Colors.black,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          title: Text(""),
+          centerTitle: false,
+        ),
+        body:                 StreamBuilder<BluetoothState>(
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              final state = snapshot.data;
+
+              if (state == BluetoothState.stateOn) {
+                return BeaconInteraction();
+              }
+
+              if (state == BluetoothState.stateOff) {
+                return TurnOnBluetooth();
+              }
+
+              return TurnOnBluetooth();
+            }
+
+            return SizedBox.shrink();
+          },
+          stream: streamController.stream,
+          initialData: BluetoothState.stateUnknown,
+        ),
+      ),
+    );
+  }
+}
+class BeaconInteraction extends StatefulWidget with WidgetsBindingObserver{
+  @override
+  BeaconInteractionState createState() => BeaconInteractionState();
+}
+
+class BeaconInteractionState extends State<BeaconInteraction> with WidgetsBindingObserver{
+  final StreamController<BluetoothState> streamController = StreamController();
+  StreamSubscription<BluetoothState> _streamBluetooth;
+  StreamSubscription<RangingResult> _streamRanging;
   final _regionBeacons = <Region, List<Beacon>>{};
   final _beacons = <Beacon>[];
   bool authorizationStatusOk = false;
   bool locationServiceEnabled = false;
   bool bluetoothEnabled = false;
 
-    @override
+  @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
 
@@ -1015,93 +1190,35 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     _streamRanging?.cancel();
     _streamBluetooth?.cancel();
     flutterBeacon.close;
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        brightness: Brightness.light,
-        primaryColor: Colors.black,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text(""),
-          centerTitle: false,
-          actions: <Widget>[
-            if (!authorizationStatusOk)
-              IconButton(
-                  icon: Icon(Icons.portable_wifi_off),
-                  color: Colors.red,
-                  onPressed: () async {
-                    await flutterBeacon.requestAuthorization;
-                  }),
-            if (!locationServiceEnabled)
-              IconButton(
-                  icon: Icon(Icons.location_off),
-                  color: Colors.red,
-                  onPressed: () async {
-                    if (Platform.isAndroid) {
-                      await flutterBeacon.openLocationSettings;
-                    } else if (Platform.isIOS) {
-
-                    }
-                  }),
-            StreamBuilder<BluetoothState>(
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  final state = snapshot.data;
-
-                  if (state == BluetoothState.stateOn) {
-                    return IconButton(
-                      icon: Icon(Icons.bluetooth_connected),
-                      onPressed: () {},
-                      color: Colors.lightBlueAccent,
-                    );
-                  }
-
-                  if (state == BluetoothState.stateOff) {
-                    return IconButton(
-                      icon: Icon(Icons.bluetooth),
-                      onPressed: () async {
-                        if (Platform.isAndroid) {
-                          try {
-                            await flutterBeacon.openBluetoothSettings;
-                          } on PlatformException catch (e) {
-                            print(e);
-                          }
-                        } else if (Platform.isIOS) {
-
-                        }
-                      },
-                      color: Colors.red,
-                    );
-                  }
-
-                  return IconButton(
-                    icon: Icon(Icons.bluetooth_disabled),
-                    onPressed: () {},
-                    color: Colors.grey,
-                  );
-                }
-
-                return SizedBox.shrink();
-              },
-              stream: streamController.stream,
-              initialData: BluetoothState.stateUnknown,
-            ),
-          ],
-        ),
-        body: _beacons == null || _beacons.isEmpty
-            ? Homepage()
-            : SelectedUser()
-      ),
-    );
+            title: Row(
+                children: <Widget>[Text('<programming> 2020',
+                    style: TextStyle(fontSize: 22, color: const Color(0xaaffffff),
+                        shadows: <Shadow>[
+                          Shadow(
+                              offset: Offset(1.0, 1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          ),
+                          Shadow(
+                              offset: Offset(-1.0, -1.0),
+                              blurRadius: 3.0,
+                              color: const Color(0xff66abbe)
+                          )])),
+                  Image( image: AssetImage('assets/images/logo.png')
+                  )])),
+        body:
+       _beacons == null || _beacons.isEmpty
+              ? NotCheckedIn()
+              : SelectedUser()
+      );
   }
 }
+
