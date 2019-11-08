@@ -12,18 +12,13 @@ You can find here detailed information about the (sub)product, hereby mentioned 
   * [User stories](#User-stories)
   * [Domain model](#Domain-model)
 * Architecture and Design
-  * [Architectural and design decisions]()
-  * [Technological architecture]()
-  * [Logical architecture]()
-* Implementation
-  * [Source code]()
-  * [Issues](): feature requests, bug fixes, improvements.
-* Test
-  * [Automated tests](): Functional tests, integration tests, acceptance tests, as much automated as possible.
-* Change management
-  * [Issues at Github]()
-* Project management
-  * Tasks management tool 
+  * [Logical architecture](#Logical-architecture)
+  * [Physical architecture](#Physical-architecture)
+  * [Prototype](#Prototype)
+* [Implementation](#Implementation)
+* [Test](#Test)
+* [Configuration and change management](#Configuration-and-change-management)
+* [Project management](#Project-management)
 
 So far, contributions are exclusively made by the initial team, but we hope to open them to the community, in all areas and topics: requirements, technologies, development, experimentation, testing, etc.
 
