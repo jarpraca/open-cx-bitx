@@ -67,7 +67,7 @@ The robot must fulfill the following requirements:
 
 ### Use case diagram 
 
-*Diagram in Trello*
+![alt text](./images/Use_Case_Diagram.png)
 
 * The user can do the login, as long as he is logged out. To do the login, the user only needs to insert the code he received when he bought the ticket. If the user inserts a valid code, he will be redirected to another page, depending on the state of his check-in. If the user inserts an invalid code, he shall remain in the same page, receiving a message that the code was invalid. 
 
