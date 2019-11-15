@@ -67,7 +67,7 @@ The robot must fulfill the following requirements:
 
 ### Use case diagram 
 
-<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="150">
+<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="300">
 
 * The user can do the login, as long as he is logged out. To do the login, the user only needs to insert the code he received when he bought the ticket. If the user inserts a valid code, he will be redirected to another page, depending on the state of his check-in. If the user inserts an invalid code, he shall remain in the same page, receiving a message that the code was invalid. 
 
@@ -85,21 +85,21 @@ In any of this use cases, if there is a problem communicating with the server (e
 
 ### User stories
 
-<img alt="User Story 1" src="./images/User_Story_1.PNG" width="200">
-<img alt="User Story 2" src="./images/User_Story_2.PNG" width="200">
-<img alt="User Story 2 Mockup" src="./images/User_Story_2_Mockup.PNG" width="100">
-<img alt="User Story 3" src="./images/User_Story_3.PNG" width="200">
-<img alt="User Story 4" src="./images/User_Story_4.PNG" width="200">
-<img alt="User Story 4 Mockup" src="./images/User_Story_4_Mockup.PNG" width="100">
-<img alt="User Story 5" src="./images/User_Story_5.PNG" width="200">
-<img alt="User Story 5 Mockup" src="./images/User_Story_5_Mockup.PNG" width="100">
-<img alt="User Story 6" src="./images/User_Story_6.PNG" width="200">
-<img alt="User Story 7" src="./images/User_Story_7.PNG" width="200">
-<img alt="User Story 7 Mockup" src="./images/User_Story_7_Mockup.PNG" width="100">
-<img alt="User Story 8" src="./images/User_Story_8.PNG" width="200">
-<img alt="User Story 8 Mockup" src="./images/User_Story_8_Mockup.PNG" width="100">
-<img alt="User Story 9" src="./images/User_Story_9.PNG" width="200">
-<img alt="User Story 9 Mockup" src="./images/User_Story_9_Mockup.PNG" width="100">
+<img alt="User Story 1" src="./images/User_Story_1.PNG" width="400">
+<img alt="User Story 2" src="./images/User_Story_2.PNG" width="400">
+<img alt="User Story 2 Mockup" src="./images/User_Story_2_Mockup.PNG" width="150">
+<img alt="User Story 3" src="./images/User_Story_3.PNG" width="400">
+<img alt="User Story 4" src="./images/User_Story_4.PNG" width="400">
+<img alt="User Story 4 Mockup" src="./images/User_Story_4_Mockup.PNG" width="150">
+<img alt="User Story 5" src="./images/User_Story_5.PNG" width="400">
+<img alt="User Story 5 Mockup" src="./images/User_Story_5_Mockup.PNG" width="150">
+<img alt="User Story 6" src="./images/User_Story_6.PNG" width="400">
+<img alt="User Story 7" src="./images/User_Story_7.PNG" width="400">
+<img alt="User Story 7 Mockup" src="./images/User_Story_7_Mockup.PNG" width="150">
+<img alt="User Story 8" src="./images/User_Story_8.PNG" width="400">
+<img alt="User Story 8 Mockup" src="./images/User_Story_8_Mockup.PNG" width="150">
+<img alt="User Story 9" src="./images/User_Story_9.PNG" width="400">
+<img alt="User Story 9 Mockup" src="./images/User_Story_9_Mockup.PNG" width="150">
 
 ### Domain model
 
