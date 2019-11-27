@@ -67,7 +67,7 @@ The robot must fulfill the following requirements:
 
 ### Use case diagram 
 
-*Diagram in Trello*
+<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="300">
 
 * The user can do the login, as long as he is logged out. To do the login, the user only needs to insert the code he received when he bought the ticket. If the user inserts a valid code, he will be redirected to another page, depending on the state of his check-in. If the user inserts an invalid code, he shall remain in the same page, receiving a message that the code was invalid. 
 
@@ -84,21 +84,22 @@ The robot must fulfill the following requirements:
 In any of this use cases, if there is a problem communicating with the server (example: checking for the valid code in the login, generating the QR-code, registering the check-in, etc.), the user should be redirected to a page informing him there has been an error and asking him to go the help center.
 
 ### User stories
-This section will contain the requirements of the product described as **user stories**, organized in a global **user story map** with **user roles** or **themes**.
 
-For each theme, or role, you may add a small description here. User stories should be detailed in the tool you decided to use for project management (e.g. trello or github projects).
-
-A user story is a description of desired functionality told from the perspective of the user or customer. A starting template for the description of a user story is 
-
-*As a < user role >, I want < goal > so that < reason >.*
-
-You add more details after, but the shorter and complete, the better. In order to decide if the user story is good, please follow the INVEST guidelines.
-
-After the user story text, you should add a draft of the corresponding user interfaces, a simple mockups or drafts, if applicable.
-
-For each user story you should write also the acceptance tests (textually in Gherkin), ie, a description of situations that will help to confirm that the system satisfies the requirements addressed in the user story.
-
-At the end, it is good to add a rough indication of the value of the user story to the customers (e.g. MoSCoW method) and the team should add an estimative of the effort to implemente it, in t-shirt sizes (XS, S, M, L, XL).
+<img alt="User Story 1" src="./images/User_Story_1.PNG" width="400">
+<img alt="User Story 2" src="./images/User_Story_2.PNG" width="400">
+<img alt="User Story 2 Mockup" src="./images/User_Story_2_Mockup.PNG" width="150">
+<img alt="User Story 3" src="./images/User_Story_3.PNG" width="400">
+<img alt="User Story 4" src="./images/User_Story_4.PNG" width="400">
+<img alt="User Story 4 Mockup" src="./images/User_Story_4_Mockup.PNG" width="150">
+<img alt="User Story 5" src="./images/User_Story_5.PNG" width="400">
+<img alt="User Story 5 Mockup" src="./images/User_Story_5_Mockup.PNG" width="150">
+<img alt="User Story 6" src="./images/User_Story_6.PNG" width="400">
+<img alt="User Story 7" src="./images/User_Story_7.PNG" width="400">
+<img alt="User Story 7 Mockup" src="./images/User_Story_7_Mockup.PNG" width="150">
+<img alt="User Story 8" src="./images/User_Story_8.PNG" width="400">
+<img alt="User Story 8 Mockup" src="./images/User_Story_8_Mockup.PNG" width="150">
+<img alt="User Story 9" src="./images/User_Story_9.PNG" width="400">
+<img alt="User Story 9 Mockup" src="./images/User_Story_9_Mockup.PNG" width="150">
 
 ### Domain model
 
@@ -164,14 +165,4 @@ For the purpose of ESOF, we will use a very simple approach, just to manage feat
 
 ## Project management
 
-Software project management is an art and science of planning and leading software projects, in which software projects are planned, implemented, monitored and controlled.
-
-In the context of ESOF, we expect that each team adopts a project management tool capable of registering tasks, assign tasks to people, add estimations to tasks, monitor tasks progress, and therefore being able to track their projects.
-
-Example of tools to do this are:
-  * [Trello.com](https://trello.com)
-  * [Github Projects](https://github.com/features/project-management/com)
-  * [Pivotal Tracker](https://www.pivotaltracker.com)
-  * [Jira](https://www.atlassian.com/software/jira)
-
-We recommend to use the simplest tool that can possibly work for the team.
+For project management, our group is using Trello. You can find our Trello board in the following link: https://trello.com/invite/b/8T9XmeIY/820dd8f2fab87c8ef924e8e77fc6bda1/botx
