@@ -1108,17 +1108,14 @@ class BluetoothInteractionState extends State<BluetoothInteraction>
     return StreamBuilder<BluetoothState>(
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          final state = snapshot.data;
+          checkAllRequirements();
 
-          if (state == BluetoothState.stateOn) {
+          if (this.bluetoothEnabled) {
             return BeaconInteraction();
           }
-
-          if (state == BluetoothState.stateOff) {
+          else {
             return TurnOnBluetooth();
           }
-
-          return TurnOnBluetooth();
         }
 
         return SizedBox.shrink();
