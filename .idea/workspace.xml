@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="828866ae-f4a9-4a43-b30d-31776d89c97e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/botx_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,29 +26,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/botx_app/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="1047" column="77" selection-start-line="1047" selection-start-column="77" selection-end-line="1047" selection-end-column="77" />
+            <state relative-caret-position="61">
+              <caret line="572" column="27" selection-start-line="572" selection-start-column="27" selection-end-line="572" selection-end-column="27" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
-                <element signature="e#1133#1167#0" />
-                <element signature="e#5401#10180#0" />
-                <element signature="e#10217#13494#0" />
-                <element signature="e#13538#17041#0" />
-                <element signature="e#25331#28738#0" />
-                <element signature="e#30442#30632#0" />
-                <element signature="e#32222#32321#0" />
-                <element signature="e#32203#32701#0" />
-                <element signature="e#32867#33528#0" />
-                <element signature="e#33547#33891#0" />
-                <element signature="e#35792#35987#0" />
-                <element signature="e#34389#37459#0" />
-                <element signature="e#34720#34819#0" />
-                <element signature="e#34840#35094#0" />
-                <element signature="e#35121#35782#0" />
-                <element signature="e#35855#36190#0" />
-                <element signature="e#36221#36415#0" />
-                <element signature="e#33066#33072#0" />
-                <element signature="e#38883#39647#0" />
+                <element signature="e#43446#44441#0" />
               </folding>
             </state>
           </provider>
@@ -54,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/botx_app/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="314">
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -134,9 +119,15 @@
       <find>state</find>
       <find>stream</find>
       <find>builder</find>
-      <find>selected</find>
       <find>homepage</find>
       <find>bluetoothIntera</find>
+      <find>bluetoothInteraction</find>
+      <find>beacon</find>
+      <find>navigator</find>
+      <find>SelectedUser</find>
+      <find>selectedU</find>
+      <find>selected</find>
+      <find>don</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,8 +140,8 @@
         <option value="$PROJECT_DIR$/botx_app/android/app/build.gradle" />
         <option value="$PROJECT_DIR$/botx_app/android/gradle.properties" />
         <option value="$PROJECT_DIR$/botx_app/android/local.properties" />
-        <option value="$PROJECT_DIR$/botx_app/pubspec.yaml" />
         <option value="$PROJECT_DIR$/botx_app/lib/login.dart" />
+        <option value="$PROJECT_DIR$/botx_app/pubspec.yaml" />
         <option value="$PROJECT_DIR$/botx_app/lib/main.dart" />
       </list>
     </option>
@@ -168,16 +159,18 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="135" />
-    <option name="y" value="16" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
+    <option name="x" value="65" />
+    <option name="y" value="25" />
+    <option name="width" value="1855" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,15 +193,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JuniFEUP/2019_20/pubhub" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -264,14 +255,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.30402684" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.31744966" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32577905" />
       <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49925372" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
@@ -281,6 +271,7 @@
       <window_info anchor="bottom" id="Flutter Performance" order="6" sideWeight="0.50074625" side_tool="true" weight="0.35582823" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3286119" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Flutter Inspector" order="2" />
@@ -373,36 +364,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="314">
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="1047" column="77" selection-start-line="1047" selection-start-column="77" selection-end-line="1047" selection-end-column="77" />
+        <state relative-caret-position="61">
+          <caret line="572" column="27" selection-start-line="572" selection-start-column="27" selection-end-line="572" selection-end-column="27" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <element signature="e#1133#1167#0" />
-            <element signature="e#5401#10180#0" />
-            <element signature="e#10217#13494#0" />
-            <element signature="e#13538#17041#0" />
-            <element signature="e#25331#28738#0" />
-            <element signature="e#30442#30632#0" />
-            <element signature="e#32222#32321#0" />
-            <element signature="e#32203#32701#0" />
-            <element signature="e#32867#33528#0" />
-            <element signature="e#33547#33891#0" />
-            <element signature="e#35792#35987#0" />
-            <element signature="e#34389#37459#0" />
-            <element signature="e#34720#34819#0" />
-            <element signature="e#34840#35094#0" />
-            <element signature="e#35121#35782#0" />
-            <element signature="e#35855#36190#0" />
-            <element signature="e#36221#36415#0" />
-            <element signature="e#33066#33072#0" />
-            <element signature="e#38883#39647#0" />
+            <element signature="e#43446#44441#0" />
           </folding>
         </state>
       </provider>

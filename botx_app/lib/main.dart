@@ -2,7 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'dart:async';
-
+import 'dart:math';
+import 'package:flutter/gestures.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_beacon/flutter_beacon.dart';
 import 'package:qr_flutter/qr_flutter.dart';
@@ -567,13 +569,11 @@ class Homepage extends StatelessWidget {
                           width: 1.0,
                           style: BorderStyle.solid),
                       borderRadius: BorderRadius.circular(40)))),
-          Container(
-            alignment: Alignment.center,
-            height: 100.0,
-            child: new FlatButton(
-              onPressed: null,
-              child: Text("Don't own a ticket?\nBuy one now",
-                  textAlign: TextAlign.center,
+        new Center(
+            heightFactor: 4,
+            child: new RichText(
+              text: new TextSpan(
+                    text: "Don't own a ticket?\nBuy one now",
                   style: TextStyle(
                       fontSize: 16,
                       color: const Color(0xaaffffff),
@@ -586,9 +586,10 @@ class Homepage extends StatelessWidget {
                             offset: Offset(-1.0, -1.0),
                             blurRadius: 3.0,
                             color: const Color(0xff66abbe))
-                      ])),
-            ),
-          ),
+                      ]),
+                    recognizer: new TapGestureRecognizer()..onTap = () => launch('https://www.facebook.com'),
+                  ),
+            )),
           Container(
               alignment: Alignment.center,
               height: 80,
@@ -633,7 +634,33 @@ class SelectedUser extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user_id = "01234567890";
-    return Padding(padding: const EdgeInsets.all(8), child: Column(children: <Widget>[
+    return Scaffold(
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+        backgroundColor: Colors.black,
+        leading: new IconButton(
+        icon: new Icon(Icons.arrow_back_ios,
+        color: const Color(0xff66abbe)),
+          onPressed: () => Navigator.of(context).pop(),
+          ),
+          title: Row(children: <Widget>[
+          Text('<programming> 2020',
+          style: TextStyle(
+          fontSize: 22,
+          color: const Color(0xaaffffff),
+          shadows: <Shadow>[
+          Shadow(
+          offset: Offset(1.0, 1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe)),
+          Shadow(
+          offset: Offset(-1.0, -1.0),
+          blurRadius: 3.0,
+          color: const Color(0xff66abbe))
+          ])),
+          Image(image: AssetImage('assets/images/logo.png'))
+          ])),
+          body: Padding(padding: const EdgeInsets.all(8), child: Column(children: <Widget>[
       Container(height: 40),
       Container(
         height: 50,
@@ -723,7 +750,7 @@ class SelectedUser extends StatelessWidget {
           Image(image: AssetImage('assets/images/bitX.png'), height: 50),
         ]),
       )),
-    ]));
+    ])));
   }
 }
 
@@ -1143,8 +1170,16 @@ class BeaconInteractionState extends State<BeaconInteraction>
     super.dispose();
   }
 
+  void navigateToCheckedIn() {
+   // Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context) => SelectedUser()));
+  }
+
+  static var rang = new Random();
+  int rand = rang.nextInt(2);
+  bool displayNotChecked=true;
   @override
   Widget build(BuildContext context) {
+    if(displayNotChecked &&(_beacons == null || _beacons.isEmpty)){
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -1172,11 +1207,14 @@ class BeaconInteractionState extends State<BeaconInteraction>
               Image(image: AssetImage('assets/images/logo.png'))
             ])),
 
-        body: _beacons == null || _beacons.isEmpty
-            ? NotCheckedIn()
-            : SelectedUser()
+        body: NotCheckedIn());
+    }
+        displayNotChecked=false;
 
+        if(rand == 1)
+          return SelectedUser();
+        else
+          return NotSelectedUser();
         //body: SelectedUser()
-    );
   }
 }

@@ -26,6 +26,7 @@ dependencies:
   flutter_beacon:
     git: https://github.com/alann-maulana/flutter_beacon
   qr_flutter: ^3.1.0
+  url_launcher: ^5.2.7
 
 dev_dependencies:
   flutter_test:
