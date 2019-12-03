@@ -8,9 +8,66 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_beacon/flutter_beacon.dart';
 import 'package:qr_flutter/qr_flutter.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
-void main() {
-  runApp(MyApp());
+import 'dart:ui';
+import 'package:flutter/cupertino.dart';
+import 'package:rxdart/subjects.dart';
+
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+FlutterLocalNotificationsPlugin();
+
+// Streams are created so that app can respond to notification-related events since the plugin is initialised in the `main` function
+final BehaviorSubject<ReceivedNotification> didReceiveLocalNotificationSubject =
+BehaviorSubject<ReceivedNotification>();
+
+final BehaviorSubject<String> selectNotificationSubject =
+BehaviorSubject<String>();
+
+class ReceivedNotification {
+  final int id;
+  final String title;
+  final String body;
+  final String payload;
+
+  ReceivedNotification(
+      {@required this.id,
+        @required this.title,
+        @required this.body,
+        @required this.payload});
+}
+
+/// IMPORTANT: running the following code on its own won't work as there is setup required for each platform head project.
+/// Please download the complete example app from the GitHub repository where all the setup has been done
+Future<void> main() async {
+  // needed if you intend to initialize in the `main` function
+  WidgetsFlutterBinding.ensureInitialized();
+  // NOTE: if you want to find out if the app was launched via notification then you could use the following call and then do something like
+  // change the default route of the app
+  // var notificationAppLaunchDetails =
+  //     await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+
+  var initializationSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
+  var initializationSettingsIOS = IOSInitializationSettings(
+      onDidReceiveLocalNotification:
+          (int id, String title, String body, String payload) async {
+        didReceiveLocalNotificationSubject.add(ReceivedNotification(
+            id: id, title: title, body: body, payload: payload));
+      });
+  var initializationSettings = InitializationSettings(
+      initializationSettingsAndroid, initializationSettingsIOS);
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings,
+      onSelectNotification: (String payload) async {
+        if (payload != null) {
+          debugPrint('notification payload: ' + payload);
+        }
+        selectNotificationSubject.add(payload);
+      });
+  runApp(
+    MaterialApp(
+      home: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatefulWidget {
@@ -19,6 +76,38 @@ class MyApp extends StatefulWidget {
 }
 
 class Login extends StatelessWidget {
+  TextEditingController submitController = TextEditingController();
+
+  void _showDialog(context) {
+      showDialog(
+        context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+                title: new Text("Login"),
+                content: new Text("Please insert a code"),
+                actions: <Widget>[
+                  new FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: new Text('Close'))
+                ]
+            );
+          }
+      );
+  }
+  void handleSubmit(context) {
+    if(submitController.text != ""){
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BeaconInteraction()),
+      );
+    }
+    else{
+      _showDialog(context);
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,6 +166,7 @@ class Login extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.40,
                   alignment: Alignment.center,
                   child: new TextField(
+                    controller: submitController,
                     style: new TextStyle(color: const Color(0xaaffffff), fontSize: 20),
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
@@ -108,11 +198,7 @@ class Login extends StatelessWidget {
                                     color: const Color(0xff66abbe))
                               ])),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => BeaconInteraction()),
-                        );
+                        handleSubmit(context);
                       },
                       shape: RoundedRectangleBorder(
                           side: BorderSide(
@@ -177,6 +263,35 @@ class Login extends StatelessWidget {
 }
 
 class RecoverCode extends StatelessWidget {
+  final submitController = TextEditingController();
+
+  void _showDialog(context, message) {
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+              title: new Text("Recover Password"),
+              content: new Text(message),
+              actions: <Widget>[
+                new FlatButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: new Text('Close'))
+              ]
+          );
+        }
+    );
+  }
+  void handleSubmit(context) {
+    if(submitController.text == "teste@gmail.com"){
+      _showDialog(context, "An email as been sent with instructions for recovery");
+    }
+    else{
+      _showDialog(context, "Please insert a valid email");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -234,6 +349,7 @@ class RecoverCode extends StatelessWidget {
                   height: 80,
                   width: MediaQuery.of(context).size.width * 0.80,
                   child: new TextField(
+                    controller: submitController,
                     style: new TextStyle(color: const Color(0xaaffffff), fontSize: 20),
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
@@ -264,11 +380,7 @@ class RecoverCode extends StatelessWidget {
                                     color: const Color(0xff66abbe))
                               ])),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => SelectedUser()),
-                        );
+                        handleSubmit(context);
                       },
                       shape: RoundedRectangleBorder(
                           side: BorderSide(
@@ -573,7 +685,8 @@ class Homepage extends StatelessWidget {
             heightFactor: 4,
             child: new RichText(
               text: new TextSpan(
-                    text: "Don't own a ticket?\nBuy one now",
+                    text: "Don't own a ticket?\n    Buy one now",
+                    
                   style: TextStyle(
                       fontSize: 16,
                       color: const Color(0xaaffffff),
@@ -587,7 +700,7 @@ class Homepage extends StatelessWidget {
                             blurRadius: 3.0,
                             color: const Color(0xff66abbe))
                       ]),
-                    recognizer: new TapGestureRecognizer()..onTap = () => launch('https://www.facebook.com'),
+                    recognizer: new TapGestureRecognizer()..onTap = () => launch('https://2020.programming-conference.org/'),
                   ),
             )),
           Container(
@@ -755,6 +868,8 @@ class SelectedUser extends StatelessWidget {
 }
 
 class NotSelectedUser extends StatelessWidget {
+  final user_id = "01234567890";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -813,9 +928,16 @@ class NotSelectedUser extends StatelessWidget {
                     thickness: 2.0))
           ]),
           Container(
-            height: 200,
-            child: const Center(
-                child: Image(image: AssetImage('assets/images/qrcode.png'))),
+            height: 230,
+            child: Center(
+              //child: Image(image: AssetImage('assets/images/qrcode.png'))
+              child: QrImage(
+                data: user_id,
+                version: QrVersions.auto,
+                size: 200.0,
+                backgroundColor: Colors.white,
+              ),
+            ),
           ),
           Row(children: <Widget>[
             Expanded(
@@ -990,6 +1112,7 @@ class TurnOnBluetooth extends StatelessWidget {
 class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
+    print("heelo");
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.light,
@@ -1011,8 +1134,7 @@ class BeaconInteraction extends StatefulWidget with WidgetsBindingObserver {
   BeaconInteractionState createState() => BeaconInteractionState();
 }
 
-class BeaconInteractionState extends State<BeaconInteraction>
-    with WidgetsBindingObserver {
+class BeaconInteractionState extends State<BeaconInteraction> with WidgetsBindingObserver {
   final StreamController<BluetoothState> streamController = StreamController();
   StreamSubscription<BluetoothState> _streamBluetooth;
   StreamSubscription<RangingResult> _streamRanging;
@@ -1021,14 +1143,52 @@ class BeaconInteractionState extends State<BeaconInteraction>
   bool authorizationStatusOk = false;
   bool locationServiceEnabled = false;
   bool bluetoothEnabled = false;
+  final MethodChannel platform = MethodChannel('crossingthestreams.io/resourceResolver');
 
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-
     super.initState();
-
     listeningState();
+
+    didReceiveLocalNotificationSubject.stream
+        .listen((ReceivedNotification receivedNotification) async {
+      await showDialog(
+        context: context,
+        builder: (BuildContext context) => CupertinoAlertDialog(
+          title: receivedNotification.title != null
+              ? Text(receivedNotification.title)
+              : null,
+          content: receivedNotification.body != null
+              ? Text(receivedNotification.body)
+              : null,
+          actions: [
+            CupertinoDialogAction(
+              isDefaultAction: true,
+              child: Text('Ok'),
+              onPressed: () async {
+                Navigator.of(context, rootNavigator: true).pop();
+              },
+            )
+          ],
+        ),
+      );
+    });
+    selectNotificationSubject.stream.listen((String payload) async {
+      print("hello");
+    });
+  }
+  
+  Future<void> _showNotification() async {
+    var androidPlatformChannelSpecifics = AndroidNotificationDetails(
+        'your channel id', 'your channel name', 'your channel description',
+        importance: Importance.Max, priority: Priority.High, ticker: 'ticker');
+    var iOSPlatformChannelSpecifics = IOSNotificationDetails();
+    var platformChannelSpecifics = NotificationDetails(
+        androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
+    await flutterLocalNotificationsPlugin.show(
+        0, '<Programming>2020', 'You have been checked in', platformChannelSpecifics,
+        payload: 'item x');
   }
 
   listeningState() async {
@@ -1177,9 +1337,10 @@ class BeaconInteractionState extends State<BeaconInteraction>
   static var rang = new Random();
   int rand = rang.nextInt(2);
   bool displayNotChecked=true;
+  bool sendNotification = true;
   @override
   Widget build(BuildContext context) {
-    if(displayNotChecked &&(_beacons == null || _beacons.isEmpty)){
+    if(displayNotChecked && (_beacons == null || _beacons.isEmpty)){
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -1208,13 +1369,18 @@ class BeaconInteractionState extends State<BeaconInteraction>
             ])),
 
         body: NotCheckedIn());
-    }
-        displayNotChecked=false;
 
-        if(rand == 1)
+    }
+
+    displayNotChecked=false;
+
+    if(sendNotification)
+      _showNotification();
+    sendNotification= false;
+
+    if(rand == 1)
           return SelectedUser();
         else
           return NotSelectedUser();
-        //body: SelectedUser()
   }
 }
