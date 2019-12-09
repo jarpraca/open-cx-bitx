@@ -35,9 +35,9 @@ Sílvia Rocha<br />
 Creating a product that improves the user experience in the check-in process.
 
 ## Elevator Pitch
-Tired of wainting in infinite queues just to make a simple check-in?<br />
+Tired of waiting in infinite lines just to make a simple check-in?<br />
 Tired of having that check-in made by ordinary people?<br />
-Here in Bitx, We have the perfect solution for you: BotX! All you have to do is have your bluetooth on and as soon as you reach the place of the event, the check-in will be made automatically for you. You will then receive a QR-code with wich you can collect your welcome kit. <br />
+Here in Bitx, We have the perfect solution for you: BotX! All you have to do is have your bluetooth on and as soon as you reach the place of the event, the check-in will be made automatically for you. You will then receive a QR-code with which you can collect your welcome kit. <br />
 But that isn't enough, is it? <br />
 Well, if you are one of the lucky ones, you will be rewarded with a special surprise: BotX, our genial robot will be the one delivering the welcome kit to you.<br />
 Are you ready for the best check-in of your life?!<br />
@@ -46,10 +46,10 @@ Are you ready for the best check-in of your life?!<br />
 
 Our product will result in two subproducts that interact with each other: the automatic check-in (provided by the app and beacon working together) and, for some of the users, a robot that will deliver the welcome kit.
 
-For this, we need to build a app that fulfills some requirements
+For this, we need to build an app that fulfills some requirements
 * Has the login and the logout functionalitys
 * Informs the user to turn on the bluetooth
-* Has a help page to inform the user on how the product works
+* Has an help page to inform the user on how the product works
 * Informs the user when the check-in was completed
 * Gives the user a QR-code so he can collect the welcome kit, if he was not selected
 * Gives the user the information that he was selected to receive the kit by the robot
@@ -57,7 +57,7 @@ For this, we need to build a app that fulfills some requirements
 The server must be able to fulfill some other requirements:
 * Comunicate with the robot, in order to send it to the selected user
 * Generate and save the QR-codes generated
-* Save information on wich QR-codes have already been read (so the same user isn't able to collect more than one welcome kit)
+* Save information on which QR-codes have already been read (so the same user isn't able to collect more than one welcome kit)
 
 The robot must fulfill the following requirements:
 * Meet the user (using the beacon to find out its location)
@@ -73,11 +73,11 @@ The robot must fulfill the following requirements:
 
 * The user can do the automatic check-in, as long as he is logged in, his bluetooth is on and he is on the perimeter of the beacon. If all the preconditions are satisfied, the check-in will be done sucessfully, and the server will generate a random number in order to decide whether the user is selected or not for the robot experience. The user will then be redirected to a page containing the QR-code and a message telling him if he was selected or not. If the user isn't logged in, than he will be in the page for the login. If the user's bluetooth is off, he will be in a page telling him to turn the bluetooth on. If the user isn't in the perimeter of the beacon, he will be in a page telling him the check-in still hasn't been completed. These three alternative flows, happen in the presented order.
 
-* The user must be shown a QR-code, once he has completed the check-in. If the check-in isn't completed, another page will be shown, as explained in the precious use case.
+* The user must be shown a QR-code, once he has completed the check-in. If the check-in isn't completed, another page will be shown, as explained in the previous use case.
 
-* The user can do the logout, as long as he is logged in. Once he does it, he will be redirected to the login page.
+* The user can do the logout, as long as he is logged in. Once he does that, he will be redirected to the login page.
 
-* The user can ask to recover the code of the register. For that he must click on the option "Recover Password" on the log in page, wich will redirect him to the recover password page. To recover the password, the user must enter his email. If the email is registered in the server, a message will be shown telling him that an email was sent with the code and he will be redirected to the login page. If the email is not registered, a messege will be shown telling him so.
+* The user can ask to recover the code of the register. For that he must click on the option "Recover Password" on the log in page, which will redirect him to the recover password page. To recover the password, the user must enter his email. If the email is registered in the server, a message will be shown telling him that an email was sent with the code and he will be redirected to the login page. If the email is not registered, a messege will be shown telling him so.
 
 * The user can receive the kit by the robot, as long as he shows the robot his QR-code and it's the first time he as done so.
 
@@ -102,12 +102,13 @@ In any of this use cases, if there is a problem communicating with the server (e
 <img alt="User Story 9 Mockup" src="./images/User_Story_9_Mockup.PNG" width="150">
 
 ### Domain model
-
-A simple UML class diagram with all the key concepts (names, attributes) and relationships involved of the problem domain addressed by your module.
+<img alt="Domain Model" src="./images/DomainModel.PNG" width="150">
 
 ---
 
 ## Architecture and Design
+
+
 The architecture of a software system encompasses the set of key decisions about its overall organization. 
 
 A well written architecture document is brief but reduces the amount of time it takes new programmers to a project to understand the code to feel able to make modifications and enhancements.
@@ -117,6 +118,8 @@ To document the architecture requires describing the decomposition of the system
 In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
 
 ### Logical architecture
+<img alt="Logical Architecture" src="./images/LogicalArchitecture.PNG" width="150">
+
 The purpose of this subsection is to document the high-level logical structure of the code, using a UML diagram with logical packages, without the worry of allocating to components, processes or machines.
 
 It can be beneficial to present the system both in a horizontal or vertical decomposition:
@@ -124,6 +127,12 @@ It can be beneficial to present the system both in a horizontal or vertical deco
 * vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
 
 ### Physical architecture
+
+For this software system we developed a mobile application that interacts with a beacon and a robot. 
+
+For the frontend development of this application we used Flutter. This choice was based on two considerations. The first is that on an open source project having a standardize language is important. The second is that this is a frequently used framework in the community so we were able to find a lot of third-party packages and support. One of those packages was used to interact with the bluetooth and the beacon itself. The beacon interaction package simply looks for a certain beacon in the range area. The robot related feature was not implemented inside this project because we considered that the two main components of interaction (robot and backend) were out of our scope as they were already being developed by other groups.
+
+
 The goal of this subsection is to document the high-level physical structure of the software system (machines, connections, software components installed, and their dependencies) using UML deployment diagrams or component diagrams (separate or integrated), showing the physical structure of the system.
 
 It should describe also the technologies considered and justify the selections made. Examples of technologies relevant for openCX are, for example, frameworks for mobile applications (Flutter vs ReactNative vs ...), languages to program with microbit, and communication with things (beacons, sensors, etc.).

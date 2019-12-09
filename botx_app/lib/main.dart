@@ -37,16 +37,9 @@ class ReceivedNotification {
         @required this.payload});
 }
 
-/// IMPORTANT: running the following code on its own won't work as there is setup required for each platform head project.
-/// Please download the complete example app from the GitHub repository where all the setup has been done
 Future<void> main() async {
   // needed if you intend to initialize in the `main` function
   WidgetsFlutterBinding.ensureInitialized();
-  // NOTE: if you want to find out if the app was launched via notification then you could use the following call and then do something like
-  // change the default route of the app
-  // var notificationAppLaunchDetails =
-  //     await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
-
   var initializationSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
   var initializationSettingsIOS = IOSInitializationSettings(
       onDidReceiveLocalNotification:
@@ -945,128 +938,6 @@ class NotSelectedUser extends StatelessWidget {
                 child: Divider(
                     color: const Color(0xff66abbe),
                     height: 40.0,
-                    thickness: 2.0))
-          ]),
-          Container(
-              alignment: Alignment.center,
-              height: 80,
-              child: FlatButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Help()),
-                    );
-                  },
-                  padding: EdgeInsets.all(0.0),
-                  child: Image.asset('assets/images/help_button.png'))),
-          Expanded(
-              child: Align(
-            alignment: Alignment.bottomRight,
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Text("Powered by",
-                      style: TextStyle(
-                          fontSize: 16,
-                          color: const Color(0xaaffffff),
-                          shadows: <Shadow>[
-                            Shadow(
-                                offset: Offset(1.0, 1.0),
-                                blurRadius: 3.0,
-                                color: const Color(0xff66abbe)),
-                            Shadow(
-                                offset: Offset(-1.0, -1.0),
-                                blurRadius: 3.0,
-                                color: const Color(0xff66abbe))
-                          ])),
-                  Image(
-                      image: AssetImage('assets/images/bitX.png'), height: 50),
-                ]),
-          )),
-        ])));
-  }
-}
-
-class TurnOnBluetooth extends StatelessWidget {
-  final StreamController<BluetoothState> streamController = StreamController();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-            backgroundColor: Colors.black,
-            leading: new IconButton(
-              icon: new Icon(Icons.arrow_back_ios,
-                  color: const Color(0xff66abbe)),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-            title: Row(children: <Widget>[
-              Text('<programming> 2020',
-                  style: TextStyle(
-                      fontSize: 22,
-                      color: const Color(0xaaffffff),
-                      shadows: <Shadow>[
-                        Shadow(
-                            offset: Offset(1.0, 1.0),
-                            blurRadius: 3.0,
-                            color: const Color(0xff66abbe)),
-                        Shadow(
-                            offset: Offset(-1.0, -1.0),
-                            blurRadius: 3.0,
-                            color: const Color(0xff66abbe))
-                      ])),
-              Image(image: AssetImage('assets/images/logo.png'))
-            ])),
-        body: Padding(padding: const EdgeInsets.all(8), child: Column(children: <Widget>[
-          Container(height: 60),
-          Row(children: <Widget>[
-            Expanded(
-                flex: 10,
-                child: Divider(
-                    color: const Color(0xff66abbe),
-                    height: 40.0,
-                    thickness: 2.0))
-          ]),
-          Container(
-            height: 100,
-            child: const Center(
-                child: Text("Please turn on your bluetooth",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 22,
-                        color: const Color(0xaaffffff),
-                        shadows: <Shadow>[
-                          Shadow(
-                              offset: Offset(1.0, 1.0),
-                              blurRadius: 3.0,
-                              color: const Color(0xff66abbe)),
-                          Shadow(
-                              offset: Offset(-1.0, -1.0),
-                              blurRadius: 3.0,
-                              color: const Color(0xff66abbe))
-                        ]))),
-          ),
-          IconButton(
-            iconSize: 100,
-            icon: Icon(Icons.bluetooth),
-            onPressed: () async {
-              if (Platform.isAndroid) {
-                try {
-                  await flutterBeacon.openBluetoothSettings;
-                } on PlatformException catch (e) {
-                  print(e);
-                }
-              }
-            },
-            color: const Color(0xff66abbe),
-          ),
-          Row(children: <Widget>[
-            Expanded(
-                flex: 10,
-                child: Divider(
-                    color: const Color(0xff66abbe),
-                    height: 200.0,
                     thickness: 2.0))
           ]),
           Container(
