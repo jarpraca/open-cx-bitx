@@ -31,6 +31,9 @@ dependencies:
   path_provider: ^0.4.1
   shared_preferences: ^0.4.3
   rxdart: ^0.22.6
+  flutter_gherkin: ^1.1.4
+  build_runner: ^1.7.2
+
 dev_dependencies:
   flutter_local_notifications: ^0.8.4+3
   flutter_test:

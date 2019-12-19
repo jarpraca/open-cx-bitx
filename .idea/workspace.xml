@@ -4,7 +4,37 @@
     <bookmark url="file://$PROJECT_DIR$/botx_app/android/app/build.gradle" line="10" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="828866ae-f4a9-4a43-b30d-31776d89c97e" name="Default Changelist" comment="" />
+    <list default="true" id="828866ae-f4a9-4a43-b30d-31776d89c97e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/authentication/LoginPage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/authentication/RecoverCodePage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/beaconInteraction/BeaconInteraction.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotCheckedInPage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotSelectedUser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/SelectedUser.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/utilities/HelpPage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/lib/utilities/Homepage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/acceptance_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/app.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/automaticCheckin.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/bluetooth.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/buyticket.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/codeRecovery.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/help.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/login.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/features/notification.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_buyTicket.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_codeRecovery.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_help.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_login_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/botx_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botx_app/test/widget_test.dart" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,102 +47,115 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_29" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/botx_app/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="687" column="26" selection-start-line="687" selection-start-column="26" selection-end-line="687" selection-end-column="26" />
+            <state relative-caret-position="-323">
+              <caret line="21" column="1" selection-start-line="21" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#1235#2222#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/beaconInteraction/BeaconInteraction.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
-                <element signature="e#2822#10377#0" />
-                <element signature="e#10421#16668#0" />
-                <element signature="e#16705#21068#0" />
-                <element signature="e#21113#24950#0" />
-                <element signature="e#48441#49559#0" />
+                <element signature="e#75#158#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/pubspec.yaml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotSelectedUser.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="102">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="11" />
               <folding>
-                <element signature="e#890#1721#0" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/local.properties">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/SelectedUser.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/gradle.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/ios/Runner/Info.plist">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app/MainActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="38" selection-start-line="5" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/utilities/Homepage.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#39#5003#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotCheckedInPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/authentication/LoginPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/utilities/HelpPage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#35#4398#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/botx_app/lib/authentication/RecoverCodePage.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#42#6289#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,18 +171,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create</find>
-      <find>state</find>
-      <find>stream</find>
-      <find>builder</find>
-      <find>homepage</find>
-      <find>bluetoothIntera</find>
-      <find>bluetoothInteraction</find>
-      <find>beacon</find>
-      <find>navigator</find>
-      <find>SelectedUser</find>
-      <find>selectedU</find>
-      <find>selected</find>
       <find>don</find>
       <find>onChanged</find>
       <find>controller</find>
@@ -158,6 +189,18 @@
       <find>_showN</find>
       <find>beaconI</find>
       <find>user_id</find>
+      <find>button</find>
+      <find>qr</find>
+      <find>qrim</find>
+      <find>func</find>
+      <find>navigator</find>
+      <find>textf</find>
+      <find>help_button</find>
+      <find>homepage</find>
+      <find>@</find>
+      <find>@g</find>
+      <find>don'</find>
+      <find>path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,9 +218,40 @@
         <option value="$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app/Application.kt" />
         <option value="$PROJECT_DIR$/botx_app/android/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/botx_app/android/app/build.gradle" />
-        <option value="$PROJECT_DIR$/botx_app/pubspec.yaml" />
         <option value="$PROJECT_DIR$/botx_app/android/build.gradle" />
+        <option value="$PROJECT_DIR$/botx_app/test/acceptance_tests/acceptance_test.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/automaticCheckin.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/bluetooth.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/buyticket.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/help.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/notification.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/login.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_login_button.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/steps/help.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/features/codeRecovery.feature" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_help.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_codeRecovery.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_buyTicket.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/acceptance_tests.dart" />
+        <option value="$PROJECT_DIR$/botx_app/test/test_driver/app.dart" />
+        <option value="$PROJECT_DIR$/botx_app/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/botx_app/test/acceptance_test.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/LoginPage.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/RecoverCodePage.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/HelpPage.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/NotCheckedInPage.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/Homepage.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/SelectedUser.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/NotSelectedUser.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/BeaconInteraction.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/utilities.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/authentication.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/utilities/Homepage.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotSelectedUser.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotCheckedInPage.dart" />
         <option value="$PROJECT_DIR$/botx_app/lib/main.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/automaticCheckIn/beaconInteraction/BeaconInteraction.dart" />
+        <option value="$PROJECT_DIR$/botx_app/lib/authentication/LoginPage.dart" />
       </list>
     </option>
   </component>
@@ -194,8 +268,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="979" />
+    <option name="x" value="961" />
+    <option name="y" value="118" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
@@ -220,62 +295,57 @@
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="automaticCheckIn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="automaticCheckIn" type="462c0819:PsiDirectoryNode" />
+              <item name="beaconInteraction" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="automaticCheckIn" type="462c0819:PsiDirectoryNode" />
+              <item name="checkInStates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
               <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
               <item name="botx_app" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open-cx-bitx" type="b2602c69:ProjectViewProjectNode" />
+              <item name="open-cx-bitx" type="462c0819:PsiDirectoryNode" />
+              <item name="botx_app" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test_driver" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,7 +359,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../open-cx/open_cx" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -301,9 +371,11 @@
       <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\android\app\src\main\kotlin\com\bitx\botx_app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\android\app\src\main\kotlin\com\bitx\botx_app" />
-      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\android\app\src\main\java" />
-      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\android\app\src\main\java\io" />
+      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\lib\authentication" />
+      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\lib\utilities" />
+      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\lib\automaticCheckIn\checkInStates" />
+      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\lib\automaticCheckIn\beaconInteraction" />
+      <recent name="C:\Users\silvi\Documents\FEUP\ESOF\open-cx-bitx\botx_app\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -318,7 +390,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="tests in acceptance_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/botx_app/test/acceptance_test.dart" />
+      <option name="testName" value="acceptance_tests.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in botx_app" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/botx_app" />
+      <option name="scope" value="FOLDER" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/botx_app/lib/main.dart" />
       <method v="2" />
@@ -327,6 +409,12 @@
       <option name="filePath" value="$PROJECT_DIR$/botx_app/lib/main.dart" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Test.tests in botx_app" />
+        <item itemvalue="Dart Test.tests in acceptance_test.dart" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -341,6 +429,29 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="tests_in_botx_app - 2019.12.19 at 00h 19m 44s.xml">
+      <configuration name="tests in botx_app" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_acceptance_tests_dart - 2019.12.19 at 00h 22m 20s.xml">
+      <configuration name="tests in acceptance_tests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_botx_app - 2019.12.19 at 00h 29m 24s.xml">
+      <configuration name="tests in botx_app" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_botx_app - 2019.12.19 at 00h 42m 37s.xml">
+      <configuration name="tests in botx_app" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_acceptance_tests_dart - 2019.12.19 at 00h 44m 47s.xml">
+      <configuration name="tests in acceptance_tests.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_botx_app - 2019.12.19 at 00h 51m 48s.xml">
+      <configuration name="tests in botx_app" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_botx_app - 2019.12.19 at 11h 06m 29s.xml">
+      <configuration name="tests in botx_app" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -352,9 +463,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1818792" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19530201" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="Resources Explorer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32577905" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49925372" visible="true" weight="0.47308782" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32719547" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49932885" weight="0.4362606" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067115" side_tool="true" weight="0.4362606" />
+      <window_info anchor="bottom" id="Flutter Performance" order="6" sideWeight="0.50074625" side_tool="true" weight="0.35582823" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3286119" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="right" id="Theme Preview" order="1" />
+      <window_info anchor="right" id="Flutter Inspector" order="2" weight="0.3295302" />
+      <window_info anchor="right" id="Flutter Outline" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18993288" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -370,36 +507,11 @@
       <window_info anchor="bottom" id="Flutter Performance" order="6" sideWeight="0.50074625" side_tool="true" weight="0.35582823" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.3286119" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Flutter Inspector" order="2" weight="0.3295302" />
       <window_info anchor="right" id="Flutter Outline" order="3" weight="0.3295302" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17919463" />
-      <window_info id="Structure" order="2" side_tool="true" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="Resources Explorer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32577905" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49925372" weight="0.47308782" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32822084" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Flutter Performance" order="6" sideWeight="0.50074625" side_tool="true" weight="0.35582823" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" visible="true" weight="0.3286119" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Theme Preview" order="1" />
-      <window_info anchor="right" id="Flutter Inspector" order="2" weight="0.3295302" />
-      <window_info anchor="right" id="Flutter Outline" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
     </layout-to-restore>
   </component>
@@ -429,6 +541,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app/Application.java" />
     <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app/Application.kt" />
+    <entry file="file://$PROJECT_DIR$/botx_app/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/android/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -450,43 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="38" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/botx_app/android/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#890#1721#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/botx_app/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/android/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -494,17 +572,238 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/kotlin/com/bitx/botx_app/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="38" selection-start-line="5" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/widget_test.dart" />
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/buyticket.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="63" lean-forward="true" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/notification.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/login.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="74" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/codeRecovery.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/automaticCheckin.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_login_button.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_help.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_codeRecovery.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/steps/tap_buyTicket.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/bluetooth.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="39" selection-start-line="37" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/app.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/test_driver/features/help.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/test/acceptance_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/authentication/RecoverCodePage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#42#6289#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/utilities.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/authentication.dart">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/utilities/Homepage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#39#5003#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/utilities/HelpPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#35#4398#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/SelectedUser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotCheckedInPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/botx_app/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="687" column="26" selection-start-line="687" selection-start-column="26" selection-end-line="687" selection-end-column="26" />
+        <state relative-caret-position="-323">
+          <caret line="21" column="1" selection-start-line="21" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1235#2222#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/beaconInteraction/BeaconInteraction.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
-            <element signature="e#2822#10377#0" />
-            <element signature="e#10421#16668#0" />
-            <element signature="e#16705#21068#0" />
-            <element signature="e#21113#24950#0" />
-            <element signature="e#48441#49559#0" />
+            <element signature="e#75#158#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/authentication/LoginPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botx_app/lib/automaticCheckIn/checkInStates/NotSelectedUser.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
