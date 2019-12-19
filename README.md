@@ -177,7 +177,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 **Effort:** S <br>
 
 ### Domain model
-<img alt="Domain Model" src="./images/DomainModel.png" width="400">
+<img alt="Domain Model" src="./images/DomainModel.png" width="600">
 
 ---
 
@@ -193,7 +193,7 @@ To document the architecture requires describing the decomposition of the system
 In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
 
 ### Logical architecture
-<img alt="Logical Architecture" src="./images/LogicalArchitecture.png" width="400">
+<img alt="Logical Architecture" src="./images/LogicalArchitecture.png" width="800">
 
 The purpose of this subsection is to document the high-level logical structure of the code, using a UML diagram with logical packages, without the worry of allocating to components, processes or machines.
 
@@ -202,7 +202,7 @@ It can be beneficial to present the system both in a horizontal or vertical deco
 * vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
 
 ### Physical architecture
-<img alt="Physical Architecture" src="./images/PhysicalArchitecture.png" width="400">
+<img alt="Physical Architecture" src="./images/PhysicalArchitecture.png" width="800">
 
 For this software system we developed a mobile application that interacts with a beacon and a robot. 
 
