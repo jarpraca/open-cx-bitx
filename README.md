@@ -67,7 +67,7 @@ The robot must fulfill the following requirements:
 
 ### Use case diagram 
 
-<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="300">
+<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="400">
 
 * The user can do the login, as long as he is logged out. To do the login, the user only needs to insert the code he received when he bought the ticket. If the user inserts a valid code, he will be redirected to another page, depending on the state of his check-in. If the user inserts an invalid code, he shall remain in the same page, receiving a message that the code was invalid. 
 
@@ -85,24 +85,99 @@ In any of this use cases, if there is a problem communicating with the server (e
 
 ### User stories
 
-<img alt="User Story 1" src="./images/User_Story_1.PNG" width="400">
-<img alt="User Story 2" src="./images/User_Story_2.PNG" width="400">
-<img alt="User Story 2 Mockup" src="./images/User_Story_2_Mockup.PNG" width="150">
-<img alt="User Story 3" src="./images/User_Story_3.PNG" width="400">
-<img alt="User Story 4" src="./images/User_Story_4.PNG" width="400">
-<img alt="User Story 4 Mockup" src="./images/User_Story_4_Mockup.PNG" width="150">
-<img alt="User Story 5" src="./images/User_Story_5.PNG" width="400">
-<img alt="User Story 5 Mockup" src="./images/User_Story_5_Mockup.PNG" width="150">
-<img alt="User Story 6" src="./images/User_Story_6.PNG" width="400">
-<img alt="User Story 7" src="./images/User_Story_7.PNG" width="400">
-<img alt="User Story 7 Mockup" src="./images/User_Story_7_Mockup.PNG" width="150">
-<img alt="User Story 8" src="./images/User_Story_8.PNG" width="400">
-<img alt="User Story 8 Mockup" src="./images/User_Story_8_Mockup.PNG" width="150">
-<img alt="User Story 9" src="./images/User_Story_9.PNG" width="400">
-<img alt="User Story 9 Mockup" src="./images/User_Story_9_Mockup.PNG" width="150">
+> 1 - As a checked-in user, I would like to receive a notification informing me the check-in is done.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a logged in user <br>
+&nbsp;&nbsp;&nbsp;When the user gets automatically checked-in <br>
+&nbsp;&nbsp;&nbsp;Then the user is notified <br>
+
+**Value:** Can Have <br>
+**Effort:** M <br>
+
+> 2 - As a selected user, I would like to be received by a robot.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a checked-in user<br>
+&nbsp;&nbsp;&nbsp;When the user is selected to be received by BotX <br>
+&nbsp;&nbsp;&nbsp;Then BotX goes to the user and delivers the welcome kit <br>
+
+**Value:** Shall Have <br>
+**Effort:** L <br>
+
+> 3 - As a non selected user, I would like to receive my welcome kit in the welcome desk.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a checked-in and non selected user<br>
+&nbsp;&nbsp;&nbsp;When the user shows the QR Code <br>
+&nbsp;&nbsp;&nbsp;Then the user receives the welcome kit at the welcome desk <br>
+
+**Value:** Shall Have <br>
+**Effort:** M <br>
+
+> 4 - As a user who has lost his code, I would like to be able to recover it, inserting my email.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that has bought a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user forgets its code <br>
+&nbsp;&nbsp;&nbsp;Then the user receives an email with its code <br>
+
+**Value:** Shall Have <br>
+**Effort:** M <br>
+
+> 5 - As a user who still doesn't have a ticket, I would like to buy a ticket and register.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that does not have a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user opens the app <br>
+&nbsp;&nbsp;&nbsp;Then the user can access the registration link through the app <br>
+
+**Value:** Can Have <br>
+**Effort:** M <br>
+
+> 6 - As a logged in user, I would like to be automatically checked in.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a logged in user<br>
+&nbsp;&nbsp;&nbsp;When the user arrives at FEUP (the beacon is detected) <br>
+&nbsp;&nbsp;&nbsp;Then the user is automatically checked-in <br>
+
+**Value:** Must Have <br>
+**Effort:** XL <br>
+
+> 7 - As a user that has bought a ticket, I am required to insert my code to be able to use the app.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user with a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user tries to access the check-in <br>
+&nbsp;&nbsp;&nbsp;Then the user is required to insert the code <br>
+&nbsp;&nbsp;&nbsp;And the user should be redirected to the beacon interaction screen <br>
+
+**Value:** Must Have <br>
+**Effort:** L <br>
+
+> 8 - As a user, when I log in, I would like to be asked to turn on my bluetooth.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that has a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user logs in <br>
+&nbsp;&nbsp;&nbsp;Then the user is required to turn on the bluetooth <br>
+
+**Value:** Must Have <br>
+**Effort:** M <br>
+
+> 9 - As a logged in user, I would like to receive some informations on how to do my check in.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that has the app<br>
+&nbsp;&nbsp;&nbsp;When the user wants to know some information about the check-in <br>
+&nbsp;&nbsp;&nbsp;Then the user can see that information in the help section of the app <br>
+
+**Value:** Can Have <br>
+**Effort:** S <br>
 
 ### Domain model
-<img alt="Domain Model" src="./images/DomainModel.PNG" width="150">
+<img alt="Domain Model" src="./images/DomainModel.png" width="600">
 
 ---
 
@@ -118,7 +193,7 @@ To document the architecture requires describing the decomposition of the system
 In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
 
 ### Logical architecture
-<img alt="Logical Architecture" src="./images/LogicalArchitecture.PNG" width="150">
+<img alt="Logical Architecture" src="./images/LogicalArchitecture.png" width="800">
 
 The purpose of this subsection is to document the high-level logical structure of the code, using a UML diagram with logical packages, without the worry of allocating to components, processes or machines.
 
@@ -127,20 +202,23 @@ It can be beneficial to present the system both in a horizontal or vertical deco
 * vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
 
 ### Physical architecture
+<img alt="Physical Architecture" src="./images/PhysicalArchitecture.png" width="800">
 
 For this software system we developed a mobile application that interacts with a beacon and a robot. 
 
 For the frontend development of this application we used Flutter. This choice was based on two considerations. The first is that on an open source project having a standardize language is important. The second is that this is a frequently used framework in the community so we were able to find a lot of third-party packages and support. One of those packages was used to interact with the bluetooth and the beacon itself. The beacon interaction package simply looks for a certain beacon in the range area. The robot related feature was not implemented inside this project because we considered that the two main components of interaction (robot and backend) were out of our scope as they were already being developed by other groups.
 
-
-The goal of this subsection is to document the high-level physical structure of the software system (machines, connections, software components installed, and their dependencies) using UML deployment diagrams or component diagrams (separate or integrated), showing the physical structure of the system.
-
-It should describe also the technologies considered and justify the selections made. Examples of technologies relevant for openCX are, for example, frameworks for mobile applications (Flutter vs ReactNative vs ...), languages to program with microbit, and communication with things (beacons, sensors, etc.).
-
 ### Prototype
-To help on validating all the architectural, design and technological decisions made, we usually implement a vertical prototype, a thin vertical slice of the system.
 
-In this subsection please describe in more detail which, and how, user(s) story(ies) were implemented.
+At this initial point, our main focus was to **plan** the project, **prepare** the process and **structure** our app.
+
+At first, we started by searching for the most suitable programming language for our project, and between our two final options, React Native or **Flutter**, the latter was the chosen one.
+
+The next step was to find a way to detect if the user had arrived at the conference, so we investigated and found **beacons** to be the best choice.
+
+As another group was also working with a **robot**, we decided from this point that we would join forces and aimed to connect both projects in the future to create a better experience for the atendees.
+
+Finally, we started creating most of the **mockups** for the app's main screens (one screen per user story), which were then refined and finished in Iteration 1.
 
 ---
 
