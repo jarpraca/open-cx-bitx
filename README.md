@@ -67,7 +67,7 @@ The robot must fulfill the following requirements:
 
 ## Use case diagram 
 
-<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="400">
+<img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="600">
 
 ### Login
 
@@ -75,7 +75,7 @@ The robot must fulfill the following requirements:
 
 **Description:** To do the login, the user only needs to insert the code he received when he bought the ticket. 
 
-**Preconditions and Postconditions:** The user must be logged out, own a ticket and have his code ready to be inserted.
+**Preconditions and Postconditions:** The user must be logged out, own a ticket and have his code ready to be inserted. After logging in, the app will start searching for the entrance's beacon.
 
 **Normal Flow:**
 * User selects the login option in the main screen
@@ -94,7 +94,7 @@ The robot must fulfill the following requirements:
 
 **Description:** The user is automatically checked in by arriving at FEUP 
 
-**Preconditions and Postconditions:** A beacon must be instaled in FEUP's entry. The user must be logged in and have his bluetooth turned on so the beacon can be detected.
+**Preconditions and Postconditions:** A beacon must be instaled in FEUP's entrance. The user must be logged in and have his bluetooth turned on so the beacon can be detected. After being checked in, the user will receive a notification and the app will display if the user will be given a welcome kit by the robot or by a staff member.
 
 **Normal Flow:**
 * User is logged in
@@ -116,13 +116,13 @@ The robot must fulfill the following requirements:
 
 **Description:** The user shows his QR Code to the robot or at the welcome desk and receives his goodies bag
 
-**Preconditions and Postconditions:** Being checked in and having the QR Code
+**Preconditions and Postconditions:** Being checked in and having the QR Code. After showing the QR Code to the robot, it will release a gift bag.
 
 **Normal Flow:**
 * User is checked in
 * User has the QR Code
 * User shows the QR Code
-* User receives gift bag
+* User receives a gift bag
 
 **Alternative Flows and Exceptions:** 
 * If the check-in isn't completed, another page will be shown 
@@ -133,9 +133,9 @@ The robot must fulfill the following requirements:
 
 **Actor:** Atendee and conference participant
 
-**Description:** The user shows his QR Code to the robot or at the welcome desk and receives his goodies bag
+**Description:** To log out, the user needs to press the logout button.
 
-**Preconditions and Postconditions:** Being checked in and having the QR Code
+**Preconditions and Postconditions:** The user must have a ticket and be logged in. After logging out, the user won't have access to the check-in page until he logs in again.
 
 **Normal Flow:**
 * User is logged in
@@ -153,7 +153,7 @@ The robot must fulfill the following requirements:
 
 **Description:** When a user does not have his ticket code he can recover it by email
 
-**Preconditions and Postconditions:** Having a ticket
+**Preconditions and Postconditions:** Having a ticket. After recovering the code, the user will have a new code will be able to login.
 
 **Normal Flow:**
 * User has a ticket
@@ -173,7 +173,7 @@ The robot must fulfill the following requirements:
 
 **Description:** If the user is one of the selected ones he will receive is gift bag by a robot
 
-**Preconditions and Postconditions:** Being checked in and having the QR Code
+**Preconditions and Postconditions:** Being checked in, having the QR Code and showing it to the robot. After this, the robot releases a gift bag and the user will be able to take full advantage of it.
 
 **Normal Flow:**
 * User is checked in
@@ -212,10 +212,10 @@ In any of this use cases, if there is a problem communicating with the server (e
 
 **Acceptance Test:** <br>
 &nbsp;&nbsp;&nbsp;Given a user that has the app<br>
-&nbsp;&nbsp;&nbsp;When the user wants to know some information about the check-in <br>
+&nbsp;&nbsp;&nbsp;When the user wants to know some information about the check-in process<br>
 &nbsp;&nbsp;&nbsp;Then the user can see that information in the help section of the app <br>
 
-**Value:** Can Have <br>
+**Value:** Could Have <br>
 **Effort:** S <br>
 
 ### User story #3
@@ -227,7 +227,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 &nbsp;&nbsp;&nbsp;When the user forgets its code <br>
 &nbsp;&nbsp;&nbsp;Then the user receives an email with its code <br>
 
-**Value:** Shall Have <br>
+**Value:** Should Have <br>
 **Effort:** M <br>
 
 
@@ -239,7 +239,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 &nbsp;&nbsp;&nbsp;When the user gets automatically checked-in <br>
 &nbsp;&nbsp;&nbsp;Then the user is notified <br>
 
-**Value:** Can Have <br>
+**Value:** Could Have <br>
 **Effort:** M <br>
 
 ### User story #5 
@@ -251,7 +251,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 &nbsp;&nbsp;&nbsp;When the user is selected to be received by BotX <br>
 &nbsp;&nbsp;&nbsp;Then BotX goes to the user and delivers the welcome kit <br>
 
-**Value:** Shall Have <br>
+**Value:** Should Have <br>
 **Effort:** L <br>
 
 ### User story #6
@@ -263,7 +263,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 &nbsp;&nbsp;&nbsp;When the user shows the QR Code <br>
 &nbsp;&nbsp;&nbsp;Then the user receives the welcome kit at the welcome desk <br>
 
-**Value:** Shall Have <br>
+**Value:** Should Have <br>
 **Effort:** M <br>
 
 ### User story #7
@@ -275,7 +275,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 &nbsp;&nbsp;&nbsp;When the user opens the app <br>
 &nbsp;&nbsp;&nbsp;Then the user can access the registration link through the app <br>
 
-**Value:** Can Have <br>
+**Value:** Could Have <br>
 **Effort:** M <br>
 
 ### User story #8 
@@ -304,21 +304,15 @@ In any of this use cases, if there is a problem communicating with the server (e
 
 ### Domain model
 
-In a conference, an atendee is associated with its ticket and a place (that can be a room, a hallway, WC or any other zone of where the conference is taking place). However, in the specific case of our project, it is only of concern when an atendee is in the entrance of FEUP, where the check-in would be done automatically because the app would detect its unique beacon.
-
 <img alt="Domain Model" src="./images/DomainModel.png" width="600">
+
+In a conference, an **atendee** is associated with its **ticket** and a **place** (that can be a room, a hallway, WC or any other zone of where the conference is taking place). However, in the specific case of our project, it is only of concern when an atendee is in the entrance of FEUP, where the check-in would be done automatically because the app would detect its unique beacon.
 
 ---
 
 ## Architecture and Design
 
-The architecture of a software system encompasses the set of key decisions about its overall organization. 
-
-A well written architecture document is brief but reduces the amount of time it takes new programmers to a project to understand the code to feel able to make modifications and enhancements.
-
-To document the architecture requires describing the decomposition of the system in their parts (high-level components) and the key behaviors and collaborations between them. 
-
-In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
+While developing this project, we always aimed to create an organized, understandable, optimized and overall well built product. To help achieve that, we applied some architecture and design techniques described below.
 
 ### Logical architecture
 <img alt="Logical Architecture" src="./images/LogicalArchitecture.png" width="800"> 
@@ -364,6 +358,7 @@ In this increment the planning phase was concluded with the help of a project ma
 * Creation of the backlog and to do lists
 * Refinement of the user stories and use cases
 * Choosing of the programming language best suited for the project
+* Design of mockups of the app's screens.
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
     <img style="margin: 20px 0" src="images/mainScreen_mockup.png" alt="Mockup Main Screen"  width="189" />
@@ -380,7 +375,7 @@ In this increment the planning phase was concluded with the help of a project ma
 
 In this increment we started the execution and the monitoring and control phases of the project.
 
-* We implemented a status report politic where all elements of the group had to report the evolution of their tasks every few days
+* Implemented a status report politic where all elements of the group had to report the evolution of their tasks every few days
 * Started the mobile application structure
 * Created most of the screens of our application (visual component)
 * Research about how beacons work and what packages were available for their integration with flutter
@@ -511,11 +506,21 @@ For project management, our group is using Trello. You can find our Trello board
 
 In iteration #5 we were assigned an open issue in the open-cx project. This issue consists in creating a button for the participant to be able to click and be checked in. </br>
 For this issue we developed the following:
-* Bottom Tab Navigation (the menu mentioned in the slides provided didn't exist yet)
-* Button for check in
-* Integration of the QR Code Generator so that the user can receive their goodies
-* QR Code Scanner so the people that deliver the goodie bags can confirm if that participant has already received a goodie bag or not (this scanner was also integrated in the helpScreen because we had no indication if this scanner were to be used inside the app but with an admin account or if it will be a standalone application)
-* Changed the participant model to include two booleans: one to check if the user is checked in and another to check if the user has received the gift bag
-* Implemented the corresponding backend (to check in the user, verify if the user is checked in, say that the participant has received the goodie bag and check if the user has already received the bag)
+* **Bottom Tab Navigation** (the menu mentioned in the slides provided didn't exist yet)
+* Button to **check in**
+* Integration of the **QR Code Generator** so that the user can receive their goodies
+* **QR Code Scanner** so the people that deliver the goodie bags can confirm if that participant has already received a goodie bag or not (this scanner was also integrated in the helpScreen because we had no indication if this scanner were to be used inside the app but with an admin account or if it will be a standalone application)
+* Changed the **participant model** to include two booleans: one to check if the user is checked in and another to check if the user has received the gift bag
+* Implemented the corresponding **backend** (to check in the user, verify if the user is checked in, say that the participant has received the goodie bag and check if the user has already received the bag)
 
 The backend feature could not be tested because we were not able to connect with mongoDB. Given that, (and to guarantee that the frontend could run without errors) we decided to comment the backend calls made by the frontend.
+
+## Last changes in the report
+
+In the last week we made some major changes to our report so that it would be as complete and accurate as possible. Topics we've changed:
+* Use cases and diagram
+* User stories
+* Architecture and Design
+* Implementation
+* Test
+* Evolution - contributions to open-cx
