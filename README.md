@@ -361,13 +361,13 @@ In this increment the planning phase was concluded with the help of a project ma
 * Design of mockups of the app's screens.
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
-    <img style="margin: 20px 0" src="images/mainScreen_mockup.png" alt="Mockup Main Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/mainScreen_mockup.PNG" alt="Mockup Main Screen"  width="189" />
     <img style="margin: 20px 0" src="images/help_mockup.png" alt="Mockup Help Screen"  width="189" /> 
-    <img style="margin: 20px 0" src="images/login_mockup.png" alt="Mockup Login Screen"  width="189"/> 
-    <img style="margin: 20px 0" src="images/recoverCode_mockup.png" alt="Mockup Recover Code Screen"  width="189" /> 
-    <img style="margin: 20px 0" src="images/bluetooth_mockup.png" alt="Mockup Bluetooth Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/login_mockup.PNG" alt="Mockup Login Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/recoverCode_mockup.PNG" alt="Mockup Recover Code Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/bluetooth_mockup.PNG" alt="Mockup Bluetooth Screen"  width="189" />
     <img style="margin: 20px 0" src="images/notCheckedIn_mockup.png" alt="Mockup Not Checked In Screen"  width="189" /> 
-    <img style="margin: 20px 0" src="images/selected_mockup.png" alt="Mockup Selected User Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/selected_mockup.PNG" alt="Mockup Selected User Screen"  width="189" />
     <img style="margin: 20px 0" src="images/notSelected_mockup.png" alt="Mockup Not Selected User Screen"  width="189" />
 </div>
 
@@ -429,7 +429,7 @@ At this point, our main focus was to organize the code and guarantee that all ma
     <img style="margin: 20px 0" src="images/mainScreen_iteration4.png" alt="Iteration 4 Main Screen"  width="189"/>
     <img style="margin: 20px 0" src="images/help_iteration4.png" alt="Iteration 4 Help Screen"  width="189" /> 
     <img style="margin: 20px 0" src="images/login_iteration4.png" alt="Iteration 4 Login Screen"  width="189"/> 
-    <img style="margin: 20px 0" src="images/login_badInput.png" alt="Iteration 4 Login Invalid Input"  width="189" /> 
+    <img style="margin: 20px 0" src="images/login_badinput.png" alt="Iteration 4 Login Invalid Input"  width="189" /> 
     <img style="margin: 20px 0" src="images/recoverCode_iteration4.png" alt="Iteration 4 Recover Code Screen"  width="189"/> 
     <img style="margin: 20px 0" src="images/recoverCode_invalidInput.png" alt="Iteration 4 Recover Code Invalid Input"  width="189"/> 
     <img style="margin: 20px 0" src="images/recoverCode_validInput.png" alt="Iteration 4 Recover Code Valid Input"  width="189"/> 
