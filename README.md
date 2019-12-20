@@ -304,7 +304,7 @@ In any of this use cases, if there is a problem communicating with the server (e
 
 ### Domain model
 
-<img alt="Domain Model" src="./images/DomainModel.png" width="600">
+<img alt="Domain Model" src="./images/DomainModel.png" width="800">
 
 In a conference, an **atendee** is associated with its **ticket** and a **place** (that can be a room, a hallway, WC or any other zone of where the conference is taking place). However, in the specific case of our project, it is only of concern when an atendee is in the entrance of FEUP, where the check-in would be done automatically because the app would detect its unique beacon.
 
