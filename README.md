@@ -69,7 +69,7 @@ The robot must fulfill the following requirements:
 
 <img alt="Use Case Diagram" src="./images/Use_Case_Diagram.png" width="400">
 
-### Sign In
+### Login
 
 **Actor:** Atendee and conference participant
 
@@ -78,7 +78,7 @@ The robot must fulfill the following requirements:
 **Preconditions and Postconditions:** The user must be logged out, own a ticket and have his code ready to be inserted.
 
 **Normal Flow:**
-* User selects the sign in option in the main screen
+* User selects the login option in the main screen
 * User inputs the ticket code in the respective field
 * User is logged in
 
@@ -138,12 +138,12 @@ The robot must fulfill the following requirements:
 **Preconditions and Postconditions:** Being checked in and having the QR Code
 
 **Normal Flow:**
-* User is signed in
+* User is logged in
 * User presses logout button
 * User is logged out
 
 **Alternative Flows and Exceptions:** 
-* If the user isn't signed in then we won't have a button to sign out
+* If the user isn't logged in then we won't have a button to logout
 
 </br>
 
@@ -194,67 +194,8 @@ In any of this use cases, if there is a problem communicating with the server (e
 
 ## User stories
 
-> 1 - As a checked-in user, I would like to receive a notification informing me the check-in is done.
-
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a logged in user <br>
-&nbsp;&nbsp;&nbsp;When the user gets automatically checked-in <br>
-&nbsp;&nbsp;&nbsp;Then the user is notified <br>
-
-**Value:** Can Have <br>
-**Effort:** M <br>
-
-> 2 - As a selected user, I would like to be received by a robot.
-
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a checked-in user<br>
-&nbsp;&nbsp;&nbsp;When the user is selected to be received by BotX <br>
-&nbsp;&nbsp;&nbsp;Then BotX goes to the user and delivers the welcome kit <br>
-
-**Value:** Shall Have <br>
-**Effort:** L <br>
-
-> 3 - As a non selected user, I would like to receive my welcome kit in the welcome desk.
-
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a checked-in and non selected user<br>
-&nbsp;&nbsp;&nbsp;When the user shows the QR Code <br>
-&nbsp;&nbsp;&nbsp;Then the user receives the welcome kit at the welcome desk <br>
-
-**Value:** Shall Have <br>
-**Effort:** M <br>
-
-> 4 - As a user who has lost his code, I would like to be able to recover it, inserting my email.
-
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a user that has bought a ticket<br>
-&nbsp;&nbsp;&nbsp;When the user forgets its code <br>
-&nbsp;&nbsp;&nbsp;Then the user receives an email with its code <br>
-
-**Value:** Shall Have <br>
-**Effort:** M <br>
-
-> 5 - As a user who still doesn't have a ticket, I would like to buy a ticket and register.
-
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a user that does not have a ticket<br>
-&nbsp;&nbsp;&nbsp;When the user opens the app <br>
-&nbsp;&nbsp;&nbsp;Then the user can access the registration link through the app <br>
-
-**Value:** Can Have <br>
-**Effort:** M <br>
-
-> 6 - As a logged in user, I would like to be automatically checked in.
-
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a logged in user<br>
-&nbsp;&nbsp;&nbsp;When the user arrives at FEUP (the beacon is detected) <br>
-&nbsp;&nbsp;&nbsp;Then the user is automatically checked-in <br>
-
-**Value:** Must Have <br>
-**Effort:** XL <br>
-
-> 7 - As a user that has bought a ticket, I am required to insert my code to be able to use the app.
+### User story #1
+> As a user that has bought a ticket, I am required to insert my code to be able to use the app.
 
 **Acceptance Test:** <br>
 &nbsp;&nbsp;&nbsp;Given a user with a ticket<br>
@@ -265,17 +206,9 @@ In any of this use cases, if there is a problem communicating with the server (e
 **Value:** Must Have <br>
 **Effort:** L <br>
 
-> 8 - As a user, when I log in, I would like to be asked to turn on my bluetooth.
+### User story #2
 
-**Acceptance Test:** <br>
-&nbsp;&nbsp;&nbsp;Given a user that has a ticket<br>
-&nbsp;&nbsp;&nbsp;When the user logs in <br>
-&nbsp;&nbsp;&nbsp;Then the user is required to turn on the bluetooth <br>
-
-**Value:** Must Have <br>
-**Effort:** M <br>
-
-> 9 - As a logged in user, I would like to receive some informations on how to do my check in.
+> As a logged in user, I would like to receive some informations on how to do my check in.
 
 **Acceptance Test:** <br>
 &nbsp;&nbsp;&nbsp;Given a user that has the app<br>
@@ -285,13 +218,99 @@ In any of this use cases, if there is a problem communicating with the server (e
 **Value:** Can Have <br>
 **Effort:** S <br>
 
+### User story #3
+
+> As a user who has lost his code, I would like to be able to recover it, inserting my email.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that has bought a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user forgets its code <br>
+&nbsp;&nbsp;&nbsp;Then the user receives an email with its code <br>
+
+**Value:** Shall Have <br>
+**Effort:** M <br>
+
+
+### User story #4 
+> As a checked-in user, I would like to receive a notification informing me the check-in is done.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a logged in user <br>
+&nbsp;&nbsp;&nbsp;When the user gets automatically checked-in <br>
+&nbsp;&nbsp;&nbsp;Then the user is notified <br>
+
+**Value:** Can Have <br>
+**Effort:** M <br>
+
+### User story #5 
+
+> As a selected user, I would like to be received by a robot.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a checked-in user<br>
+&nbsp;&nbsp;&nbsp;When the user is selected to be received by BotX <br>
+&nbsp;&nbsp;&nbsp;Then BotX goes to the user and delivers the welcome kit <br>
+
+**Value:** Shall Have <br>
+**Effort:** L <br>
+
+### User story #6
+
+> As a non selected user, I would like to receive my welcome kit in the welcome desk.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a checked-in and non selected user<br>
+&nbsp;&nbsp;&nbsp;When the user shows the QR Code <br>
+&nbsp;&nbsp;&nbsp;Then the user receives the welcome kit at the welcome desk <br>
+
+**Value:** Shall Have <br>
+**Effort:** M <br>
+
+### User story #7
+
+> As a user who still doesn't have a ticket, I would like to buy a ticket and register.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that does not have a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user opens the app <br>
+&nbsp;&nbsp;&nbsp;Then the user can access the registration link through the app <br>
+
+**Value:** Can Have <br>
+**Effort:** M <br>
+
+### User story #8 
+> As a logged in user, I would like to be automatically checked in.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a logged in user<br>
+&nbsp;&nbsp;&nbsp;When the user arrives at FEUP (the beacon is detected) <br>
+&nbsp;&nbsp;&nbsp;Then the user is automatically checked-in <br>
+
+**Value:** Must Have <br>
+**Effort:** XL <br>
+
+
+### User story #9
+
+> As a user, when I log in, I would like to be asked to turn on my bluetooth.
+
+**Acceptance Test:** <br>
+&nbsp;&nbsp;&nbsp;Given a user that has a ticket<br>
+&nbsp;&nbsp;&nbsp;When the user logs in <br>
+&nbsp;&nbsp;&nbsp;Then the user is required to turn on the bluetooth <br>
+
+**Value:** Must Have <br>
+**Effort:** M <br>
+
 ### Domain model
+
+In a conference, an atendee is associated with its ticket and a place (that can be a room, a hallway, WC or any other zone of where the conference is taking place). However, in the specific case of our project, it is only of concern when an atendee is in the entrance of FEUP, where the check-in would be done automatically because the app would detect its unique beacon.
+
 <img alt="Domain Model" src="./images/DomainModel.png" width="600">
 
 ---
 
 ## Architecture and Design
-
 
 The architecture of a software system encompasses the set of key decisions about its overall organization. 
 
@@ -302,20 +321,23 @@ To document the architecture requires describing the decomposition of the system
 In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
 
 ### Logical architecture
-<img alt="Logical Architecture" src="./images/LogicalArchitecture.png" width="800">
+<img alt="Logical Architecture" src="./images/LogicalArchitecture.png" width="800"> 
 
-The purpose of this subsection is to document the high-level logical structure of the code, using a UML diagram with logical packages, without the worry of allocating to components, processes or machines.
-
-It can be beneficial to present the system both in a horizontal or vertical decomposition:
-* horizontal decomposition may define layers and implementation concepts, such as the user interface, business logic and concepts; 
-* vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
+To organize our software and keep it clean and easily understandable to other developers, we decided to split our code into packages. The main three **packages** are:
+* **Authentication**: responsible for logging in and recovering the ticket code.
+* **Utilities**: contains the help and welcome pages.
+* **Automatic Check-in**: in charge of automatically checking in the atendee; it is divided in two packages:
+    * **Check-in States**: comprises all the states of an atendee in terms of check-in: not done, done and selected (to be greeted by the robot) and done but not selected.
+    * **Beacon Interaction**: detects the FEUP entrance's beacon using a third-party package.
 
 ### Physical architecture
 <img alt="Physical Architecture" src="./images/PhysicalArchitecture.png" width="800">
 
-For this software system we developed a mobile application that interacts with a beacon and a robot. 
+From a hardware point of view, our system consists in the **app** BotX, that detects **beacons** (specifically the entrance's beacon) and that connects to a **server**, which then requests a **robot** to come greet a selected antendee and offer him some goodies.
 
-For the frontend development of this application we used Flutter. This choice was based on two considerations. The first is that on an open source project having a standardize language is important. The second is that this is a frequently used framework in the community so we were able to find a lot of third-party packages and support. One of those packages was used to interact with the bluetooth and the beacon itself. The beacon interaction package simply looks for a certain beacon in the range area. The robot related feature was not implemented inside this project because we considered that the two main components of interaction (robot and backend) were out of our scope as they were already being developed by other groups.
+For the frontend development of this application we used **Flutter**. This choice was based on two considerations: the first one is that on an open source project having a standardized language is of great importance; the second one is that this is a frequently used framework in the community so we were able to find a lot of third-party packages and support. One of those packages was used to interact with the bluetooth and the beacon itself. The beacon interaction package simply looks for a specific beacon in the range area.
+
+The robot related feature was not implemented inside this project because the two main components of its interaction (robot and backend) were already being developed by other groups. We intended to integrate both apps, but due to time restrictions and the lack of backend features needed to connect the projects.
 
 ### Prototype
 
@@ -384,19 +406,41 @@ All the increments described above can also be checked out [here](https://github
 ### Test Plan
 
 We consider the testing phase a really important one. Given that, we plan to test all the features that we intend to implement:
-* Automatic Check In
-* Help
 * Login
-* Notifications
+* Help
 * Code Recovery
+* Notifications
+* Automatic Check In
 * Ticket Acquisition
 * Bluetooth detection
 
-Of this features, we have already implemented gherkin tests for the login, code recovery, help and ticket acquisition.
-
 ###  Test Case Specifications
 
-* test case specifications to verify the functionalities, using unit tests and acceptance tests.
+We decided to implement tests for only three of the features mentioned in our plan given that the main purpose of making this automated tests were to learn how to work with gherkin. 
+
+As visible below, all of the three chosen features passed the developed tests. For each of this feature, we developed three step definitions (Given, When and Then conditions).
+
+We consider the use of gherkin (and the automation of the acceptance tests itself) a really useful tool to apply in future projects in order to help to determine if a certain feature is actually completed with success.  
+
+#### User Story #1 Login
+
+The definition of this user story (and the respective acceptance test) can be found [here](#User-Story-#1)
+
+<img alt="Test Log for Login" src="./images/loginTestLog.png" width="1000">
+
+#### User Story #2 Help
+
+The definition of this user story (and the respective acceptance test) can be found [here](#User-story-#2)
+
+<img alt="Test Log for Help" src="./images/helpTestLog.png" width="1000">
+
+#### User Story #3 Code Recovery
+
+The definition of this user story (and the respective acceptance test) can be found [here](#User-story-#3)
+
+<img alt="Test Log for Code Recovery" src="./images/codeRecoveryTestLog.png" width="1000">
+
+The code for the automated acceptance tests that were made can be found [here](https://github.com/softeng-feup/open-cx-bitx/tree/master/botx_app/test)
 
 ---
 ## Configuration and change management

@@ -3,7 +3,6 @@ import 'package:flutter_gherkin/flutter_gherkin.dart';
 import 'package:gherkin/gherkin.dart';
 import 'package:glob/glob.dart';
 
-import 'test_driver/steps/tap_buyTicket.dart';
 import 'test_driver/steps/tap_codeRecovery.dart';
 import 'test_driver/steps/tap_help.dart';
 import 'test_driver/steps/tap_login_button.dart';
@@ -19,10 +18,15 @@ Future<void> main() {
     ..hooks = [
     ] // you can include "AttachScreenshotOnFailedStepHook()" to take a screenshot of each step failure and attach it to the world object
     ..stepDefinitions = [
-      TapBuyTicketButton(),
-      TapCodeRecoveryButton(),
-      TapLoginButton(),
-      TapHelpButton()
+      CodeRecoveryGiven(),
+      CodeRecoveryWhen(),
+      CodeRecoveryThen(),
+      HelpGiven(),
+      HelpWhen(),
+      HelpThen(),
+      LoginGiven(),
+      LoginWhen(),
+      LoginThen()
     ]
     ..customStepParameterDefinitions = [
 
