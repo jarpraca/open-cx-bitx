@@ -365,6 +365,17 @@ In this increment the planning phase was concluded with the help of a project ma
 * Refinement of the user stories and use cases
 * Choosing of the programming language best suited for the project
 
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+    <img style="margin: 20px 0" src="images/mainScreen_mockup.png" alt="Mockup Main Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/help_mockup.png" alt="Mockup Help Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/login_mockup.png" alt="Mockup Login Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/recoverCode_mockup.png" alt="Mockup Recover Code Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/bluetooth_mockup.png" alt="Mockup Bluetooth Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notCheckedIn_mockup.png" alt="Mockup Not Checked In Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/selected_mockup.png" alt="Mockup Selected User Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notSelected_mockup.png" alt="Mockup Not Selected User Screen"  width="189" />
+</div>
+
 ### Product Increment #2 
 
 In this increment we started the execution and the monitoring and control phases of the project.
@@ -373,6 +384,17 @@ In this increment we started the execution and the monitoring and control phases
 * Started the mobile application structure
 * Created most of the screens of our application (visual component)
 * Research about how beacons work and what packages were available for their integration with flutter
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+    <img style="margin: 20px 0" src="images/mainScreen_iteration2.png" alt="Iteration 2 Main Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/help_iteration2.png" alt="Iteration 2 Help Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/login_iteration2.png" alt="Iteration 2 Login Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/recoverCode_iteration2.png" alt="Iteration 2 Recover Code Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/bluetooth_iteration2.png" alt="Iteration 2 Bluetooth Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notCheckedIn_iteration2.png" alt="Iteration 2 Not Checked In Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/selected_iteration2.png" alt="Iteration 2 Selected User Screen"  width="189"/>
+    <img style="margin: 20px 0" src="images/notSelected_iteration2.png" alt="Iteration 2 Not Selected User Screen"  width="189"/>
+</div>
 
 ### Product Increment #3
 
@@ -386,6 +408,17 @@ We decided not to implement the backend component for our application given that
 * Improvement of the application's navigation
 * Added correct behavior after the beacon detection
 
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+    <img style="margin: 20px 0" src="images/mainScreen_iteration3.png" alt="Iteration 3 Main Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/help_iteration3.png" alt="Iteration 3 Help Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/login_iteration3.png" alt="Iteration 3 Login Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/recoverCode_iteration3.png" alt="Iteration 3 Recover Code Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/bluetooth_iteration3.png" alt="Iteration 3 Bluetooth Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notCheckedIn_iteration3.png" alt="Iteration 3 Not Checked In Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/selected_iteration3.png" alt="Iteration 3 Selected User Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notSelected_iteration3.png" alt="Iteration 3 Not Selected User Screen"  width="189" />
+</div>
+
 ### Product Increment #4
 At this point, our main focus was to organize the code and guarantee that all main features where correctly implemented.
 
@@ -396,6 +429,21 @@ At this point, our main focus was to organize the code and guarantee that all ma
 * Created functions to verify input in login and recover code screens. In the login screen the user only has to insert something for it to work (without a backend we did not have a way to verify if the code is valid). In the recover code input the user must insert teste@gmail.com for it to recognize it as a valid email (again with no backend there wasn't a way to know if there was actually an account with that email)
 * Refactor of the code to divide it in the correct packages (done after the deadline for the increment #4 so it does not appear inside the iteration_4 release)
 * Report Improvements
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+    <img style="margin: 20px 0" src="images/mainScreen_iteration4.png" alt="Iteration 4 Main Screen"  width="189"/>
+    <img style="margin: 20px 0" src="images/help_iteration4.png" alt="Iteration 4 Help Screen"  width="189" /> 
+    <img style="margin: 20px 0" src="images/login_iteration4.png" alt="Iteration 4 Login Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/login_badInput.png" alt="Iteration 4 Login Invalid Input"  width="189" /> 
+    <img style="margin: 20px 0" src="images/recoverCode_iteration4.png" alt="Iteration 4 Recover Code Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/recoverCode_invalidInput.png" alt="Iteration 4 Recover Code Invalid Input"  width="189"/> 
+    <img style="margin: 20px 0" src="images/recoverCode_validInput.png" alt="Iteration 4 Recover Code Valid Input"  width="189"/> 
+    <img style="margin: 20px 0" src="images/bluetooth_iteration4.png" alt="Iteration 4 Bluetooth Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notCheckedIn_iteration4.png" alt="Iteration 4 Not Checked In Screen"  width="189"/> 
+    <img style="margin: 20px 0" src="images/selected_iteration4.png" alt="Iteration 4 Selected User Screen"  width="189" />
+    <img style="margin: 20px 0" src="images/notSelected_iteration4.png" alt="Iteration 4 Not Selected User Screen"  width="189" />
+</div>
+
 
 </br> </br>
 All the increments described above can also be checked out [here](https://github.com/softeng-feup/open-cx-bitx/releases)
