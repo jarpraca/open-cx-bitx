@@ -78,9 +78,9 @@ The robot must fulfill the following requirements:
 **Preconditions and Postconditions:** The user must be logged out, own a ticket and have his code ready to be inserted.
 
 **Normal Flow:**
-User selects the sign in option in the main screen
-User inputs the ticket code in the respective field
-User is logged in
+* User selects the sign in option in the main screen
+* User inputs the ticket code in the respective field
+* User is logged in
 
 **Alternative Flows and Exceptions:** 
 * If the user enters any invalid input he will not be logged in and will be asked to fill in the code correctly.
@@ -97,11 +97,11 @@ User is logged in
 **Preconditions and Postconditions:** A beacon must be instaled in FEUP's entry. The user must be logged in and have his bluetooth turned on so the beacon can be detected.
 
 **Normal Flow:**
-User is logged in
-User turns on bluetooth
-User arrives at FEUP
-User is checked in
-User is notified
+* User is logged in
+* User turns on bluetooth
+* User arrives at FEUP
+* User is checked in
+* User is notified
 
 **Alternative Flows and Exceptions:** 
 * If the user isn't logged in, than he will be in the page for the login. 
@@ -110,7 +110,7 @@ User is notified
 
 </br>
 
-### Mostrar QR Code
+### Show QR Code
 
 **Actor:** Atendee and conference participant
 
@@ -119,10 +119,10 @@ User is notified
 **Preconditions and Postconditions:** Being checked in and having the QR Code
 
 **Normal Flow:**
-User is checked in
-User has the QR Code
-User shows the QR Code
-User receives gift bag
+* User is checked in
+* User has the QR Code
+* User shows the QR Code
+* User receives gift bag
 
 **Alternative Flows and Exceptions:** 
 * If the check-in isn't completed, another page will be shown 
@@ -138,9 +138,9 @@ User receives gift bag
 **Preconditions and Postconditions:** Being checked in and having the QR Code
 
 **Normal Flow:**
-User is signed in
-User presses logout button
-User is logged out
+* User is signed in
+* User presses logout button
+* User is logged out
 
 **Alternative Flows and Exceptions:** 
 * If the user isn't signed in then we won't have a button to sign out
@@ -156,11 +156,11 @@ User is logged out
 **Preconditions and Postconditions:** Having a ticket
 
 **Normal Flow:**
-User has a ticket
-User wants to login but doesn't remember code
-User opens recovery screen
-User gives his email
-User receives email with password recovery option
+* User has a ticket
+* User wants to login but doesn't remember code
+* User opens recovery screen
+* User gives his email
+* User receives email with password recovery option
 
 **Alternative Flows and Exceptions:** 
 * If the user doesn't have a ticket or inputs a invalid email he will be told so and will have to input a valid email 
@@ -176,11 +176,11 @@ User receives email with password recovery option
 **Preconditions and Postconditions:** Being checked in and having the QR Code
 
 **Normal Flow:**
-User is checked in
-User is one of the selected ones
-User has the QR Code
-User shows the QR Code to the robot
-User receives gift bag
+* User is checked in
+* User is one of the selected ones
+* User has the QR Code
+* User shows the QR Code to the robot
+* User receives gift bag
 
 </br>
 
@@ -403,7 +403,7 @@ Of this features, we have already implemented gherkin tests for the login, code 
 
 For the configuration and change management we planned a simple approach for our project. We tried to follow the github flow by using tags and releases for each iteration. 
 
-In retrospective, we wished we had realized the value of branches and pull requests earlier. We know understand that they are important to guarantee control and maintain the integrity of the project. 
+In retrospective, we wished we had realized the value of branches and pull requests earlier. We now understand that they are important to guarantee control and maintain the integrity of the project. 
 
 However, the fact that we are now (in iteration #5) working with those tools is really useful so that we can learn more from this and apply it to future projects.
 
@@ -422,8 +422,8 @@ For this issue we developed the following:
 * Bottom Tab Navigation (the menu mentioned in the slides provided didn't exist yet)
 * Button for check in
 * Integration of the QR Code Generator so that the user can receive their goodies
-* QR Code Scanner so the people that deliver the gift bags can confirm if that participant has already receive a goodie bag or not (this scanner was also integrated in the helpScreen because we had no indication if this scanner were to be used inside the app but with an admin account or if it will be a standalone application)
-* Changed the participant model to include two booleans: one to check if the user is checked in and another to check if the usar has received the gift bag
+* QR Code Scanner so the people that deliver the goodie bags can confirm if that participant has already received a goodie bag or not (this scanner was also integrated in the helpScreen because we had no indication if this scanner were to be used inside the app but with an admin account or if it will be a standalone application)
+* Changed the participant model to include two booleans: one to check if the user is checked in and another to check if the user has received the gift bag
 * Implemented the corresponding backend (to check in the user, verify if the user is checked in, say that the participant has received the goodie bag and check if the user has already received the bag)
 
-The backend feature could not be tested because we were not able to connect with mongoDB so the connection with the backend is commented so that the frontend can run without erros.
+The backend feature could not be tested because we were not able to connect with mongoDB. Given that, (and to guarantee that the frontend could run without errors) we decided to comment the backend calls made by the frontend.
